@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import AuthContext from '../auth/AuthContext';
+import AuthContext from '../context/AuthContext';
 
 function Nav() {
   const [auth, setAuth] = useContext(AuthContext);
@@ -17,7 +17,7 @@ function Nav() {
       <Link className="nav__link" to='/'>Home</Link>
       {auth ? (
         <>
-          | <Link className="nav__link" to='/contact'>Contact</Link> 
+          | <Link className="nav__link" to='/contact'>Contact</Link>
           <button className="nav__logout" onClick={logout}>Log out</button>
         </>
       ) : (
