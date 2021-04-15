@@ -1,0 +1,33 @@
+.services {
+    padding: 5rem 0;
+  }
+  .services {
+    background: $darkGrey;
+    text-align: center;
+  
+  &__center {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+  }
+}
+
+.service {
+    
+  &__span {
+    display: inline-block;
+    color: $primaryColor;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+   &__h3 {
+    letter-spacing:$mainSpacing;
+  }
+  &__p {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

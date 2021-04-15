@@ -2,6 +2,9 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
+import Service from '../components/Services';
+
+
 const HomePage = () => {
   return (
     <>
@@ -13,10 +16,8 @@ const HomePage = () => {
         </Link>
       </Banner>
     </Hero>
-        <h1 className="hero__title">Welcome</h1>
-        <h2 className="hero__underTitle">This is the Home page.</h2>
+    <Service />
     </div>
-
     </>
   );
 };
