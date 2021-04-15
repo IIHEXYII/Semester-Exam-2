@@ -9,6 +9,11 @@
     &__logo {
         width: 3.5em;
     }
+    &__title {
+      display: flex;
+      max-width: 200px;
+      align-items: center;
+    }
     &__header{
         display: flex;
         justify-content: space-between;
@@ -72,8 +77,11 @@ margin: 1rem auto 0 auto;
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 828px) {
     .navbar{
+      &__title {
+        max-width: 100px;
+      }
         &__btn {
             display: none;
           }
@@ -99,6 +107,7 @@ margin: 1rem auto 0 auto;
             font: inherit;
             cursor: pointer;
             font-weight: 600;
+            min-width: 100px;
           }
           &__logout:hover {
               color: $primaryRed;

@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Hero from '../components/Hero';
 export default function Error404() {
     return (
         <div>
-            Oh No 404!
+           <Hero />
         </div>
     )
 }

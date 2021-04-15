@@ -19,6 +19,7 @@ export default class Nav extends Component {
           <Link to="/">
             <img className="navbar__logo" src={logo} alt="Hotel Logo" />
           </Link>
+          <h1 className="navbar__title">Hotel Booking</h1>
           <button type="button" className="navbar__btn"
           onClick={this.handleToggle}>
             <FaBars className="navbar__icon" />
