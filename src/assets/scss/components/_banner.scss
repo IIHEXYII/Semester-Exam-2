@@ -1,0 +1,44 @@
+.banner {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.7);
+    color: $mainWhite;
+    padding: 2rem 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: $mainSpacing;
+    border-radius:$mainBorderRadius;
+    min-width: 350px;
+  &__title {
+    font-size: 2.5rem;
+  }
+  &__div {
+    width: 10rem;
+    height: 5px;
+    background: $primaryColor;
+    margin: 1.7rem auto;
+  }
+  &__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  &__btn {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: $mainSpacing;
+    color: $mainBlack;
+    background: $primaryColor;
+    padding: 0.4rem 0.9rem;
+    border: 3px solid $primaryColor;
+    transition:$mainTransition;
+    border-radius:$mainBorderRadius;
+    text-transform: uppercase;
+    cursor: pointer; 
+    &:hover {
+        background: transparent;
+        color: $primaryColor;
+    }
+  }
+}
+
+
+  

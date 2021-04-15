@@ -1,9 +1,18 @@
 import React from 'react'
 import Hero from '../components/Hero';
+import Banner from '../components/Banner';
+import {Link} from 'react-router-dom';
+
 export default function Error404() {
     return (
-        <div>
-           <Hero />
+        <div className="pageContent">
+          <Hero>
+            <Banner title="404" subtitle="Page Not Found!">
+                 <Link to="/" className="banner__btn">
+                        Return Home
+                    </Link>
+              </Banner>
+            </Hero>
         </div>
     )
 }
