@@ -1,10 +1,9 @@
-// import { useContext } from 'react';
-// import { Link, useHistory } from 'react-router-dom';
-// import AuthContext from '../context/AuthContext';
+
 import React, { Component } from 'react';
 import logo from '../assets/images/meme.png';
-import {FaBars} from 'react-icons/fa';
-import {Link} from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import AuthContent from './AuthContent';
 
 export default class Nav extends Component {
     state= {
@@ -35,6 +34,7 @@ export default class Nav extends Component {
               <li>
                 <Link to="/rooms/:id">SingleRooms</Link>
               </li>
+              <AuthContent />
             </ul>
           </div>
         </nav>

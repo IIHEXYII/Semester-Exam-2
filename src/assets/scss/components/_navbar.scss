@@ -43,10 +43,33 @@
       &__link a:hover {
           color: $primaryColor;
       }
+      &__logout {
+        margin: 0 1rem;       
+        background: none;
+        border: none;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        display: block;
+        text-decoration: none;
+        padding: 1rem 0;
+        color: $mainBlack;
+        transition: $mainTransition;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: $mainSpacing;
+      }
 }
-
+.nav-align {
+margin: 1rem auto 0 auto;
+}
 .show-nav {
-    height: 160px;
+    // max-height: 250px;
+    height:auto;
+    // need to find a fix to make it smooth again 
+    // but for now leave it on auto for now
+
 }
 
 @media screen and (min-width: 768px) {
@@ -67,8 +90,24 @@
           }
           &__link a {
             margin: 0 1rem;
-            padding: 0.5rem 0;
+            // padding: 0.5rem 0;
+          }
+          &__logout {
+            margin: 0 1rem;
+            // padding: 0.5rem 0;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            font-weight: 600;
+          }
+          &__logout:hover {
+              color: $primaryRed;
           }
     }
-   
+    .nav-align {
+        }
+        .li-flex {
+            display: flex;
+            height: 50px;
+        }
   }

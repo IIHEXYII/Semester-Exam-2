@@ -39,8 +39,9 @@ const Login = () => {
 
   return (
     <>
+    <div className="pageContent">
     <div className="login">
-    <div className="login__title">Login Form</div>
+    <div className="login__title">Login</div>
       <form className="login__form" onSubmit={handleSubmit(onSubmit)}>
         {loginError && <p>{loginError}</p>}
         <fieldset className="login__fieldset" disabled={submitting}>
@@ -63,6 +64,7 @@ const Login = () => {
           <button className="login__submit" type='submit'>{submitting ? 'Loggin in...' : 'Login'}</button>
         </fieldset>
       </form>
+      </div>
     </div>
     </>
   );
