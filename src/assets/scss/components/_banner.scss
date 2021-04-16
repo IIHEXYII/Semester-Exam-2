@@ -41,4 +41,21 @@
 }
 
 
-  
+@media screen and (min-width: 576px) {
+  .banner {
+      padding: 2rem 3rem;
+    
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+      padding: 2rem 6rem;
+   
+      &__title{
+        font-size: 4rem;
+    }
+  }
+}

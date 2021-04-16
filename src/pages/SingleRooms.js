@@ -1,17 +1,12 @@
 import React from 'react'
 
-function SingleRooms() {
+export default function SingleRooms() {
     return (
         <>
-    <div className="pageContent">
-        <div className="hero">
-            <h1 className="hero__title">SingleRooms</h1>
-            <h2 className="hero__underTitle">A single room page</h2>
-        </div>
-    </div>
-  
-    </>
+            <div className="pageContent">
+                <h1>Single Rooms looking for love near you!</h1>
+                <p>Find your room here.</p>
+            </div>
+        </>
     )
 }
-
-export default SingleRooms

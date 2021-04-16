@@ -32,9 +32,9 @@ export default class Nav extends Component {
               <li>
                 <Link to="/rooms">Rooms</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/rooms/:id">SingleRooms</Link>
-              </li>
+              </li> */}
               <AuthContent />
             </ul>
           </div>

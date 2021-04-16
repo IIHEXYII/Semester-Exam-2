@@ -12,9 +12,12 @@ function Nav() {
     }
   
     return (
-        <li className="li-flex">
+        <ul className="ul-flex">
         {auth ? (
           <>
+          <li>
+            <Link to="/addProduct">Add New</Link>
+            </li>
            <Link className="navbar__link" to='/admin'>Admin</Link>
            <li>
             <button className="navbar__logout nav-align" onClick={logout}>Log out</button>
@@ -23,7 +26,7 @@ function Nav() {
         ) : (
           <Link className="navbar__link show-nav" to='/login'>Login</Link>
         )}
-          </li>
+          </ul>
     );
   }
   
