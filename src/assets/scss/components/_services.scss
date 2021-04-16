@@ -25,6 +25,7 @@
   }
    &__h3 {
     letter-spacing:$mainSpacing;
+    text-transform: capitalize;
   }
   &__p {
     width: 80%;

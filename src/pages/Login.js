@@ -6,7 +6,7 @@ import axios from 'axios';
 import AuthContext from '../context/AuthContext';
 import {loginSchema} from '../utils/validation/Schemas';
 import { useHistory } from "react-router-dom";
-
+import Hero from '../components/Hero';
 const Login = () => {
   const [submitting, setSubmitting] = useState(false);
   const [loginError, setLoginError] = useState(null);
@@ -40,6 +40,7 @@ const Login = () => {
   return (
     <>
     <div className="pageContent">
+    <Hero>
     <div className="login">
     <div className="login__title">Login</div>
       <form className="login__form" onSubmit={handleSubmit(onSubmit)}>
@@ -65,7 +66,9 @@ const Login = () => {
         </fieldset>
       </form>
       </div>
+      </Hero>
     </div>
+  
     </>
   );
 };

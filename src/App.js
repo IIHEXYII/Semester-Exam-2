@@ -1,12 +1,16 @@
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
 import Navbar from './components/Navbar';
+
+//Pages
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Admin from "./pages/Admin";
 import Rooms from "./pages/Rooms";
 import SingleRooms from "./pages/SingleRooms";
 import Error404 from "./pages/Error404";
+// Pages End
+
 function App() {
   return (
     <AuthProvider>
