@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './assets/scss/main.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { RoomProvider } from './context/RoomContext';
+import { HotelProvider } from './context/HotelContext';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <RoomProvider>
+    <HotelProvider>
       <Router>
       <App />
       </Router>
-    </RoomProvider>
+    </HotelProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

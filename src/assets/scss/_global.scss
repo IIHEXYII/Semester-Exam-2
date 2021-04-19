@@ -18,5 +18,12 @@ body {
 }
 
 .pageContent {
-    margin: 80px auto 0 auto;
+    margin: 85px auto 0 auto;
+}
+
+.header {
+    text-align: center;
+    font-size:2rem;
+    padding:$mainSpacing;
+    text-transform: uppercase;
 }

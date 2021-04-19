@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 import useAxios from '../utils/useAxios';
 import { PRODUCTS_PATH } from '../utils/constants';
@@ -45,25 +45,23 @@ const Admin = () => {
       if (!products) {
         return <p>Loading...</p>;
       }
-      if (auth) {
         return (
           <>
             <div className="pageContent">
               <h1 className="header">List of Content</h1>
-              {products.map(product => {
-                  return (
-                    <div className="card">
-                      <Link key={product.id} to={`/edit/${product.id}`}>
-                          <Item {...product} />
-                      </Link>                  
-                      <button onClick={() => deleteProduct(product.id, product.title)}>Delete</button> 
-                    </div>
-                  );
-              })}
+              <div className="itemList">
+                {products.map(product => {
+                        return (
+                          <div key={product.id} className="itemList__component">
+                                <Item {...product} />
+                                <button className="btn__delete" onClick={() => deleteProduct(product.id, product.title)}>Delete</button> 
+                          </div>
+                        );
+                    })}
+              </div>
             </div>
           </>
           );
-      }
    
 };
 

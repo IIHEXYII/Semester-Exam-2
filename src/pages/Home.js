@@ -10,9 +10,9 @@ const HomePage = () => {
     <>
     <div className="pageContent">
     <Hero>
-      <Banner title="luxurious Rooms" subtitle="deluxe rooms starting at $299">
-        <Link to="/rooms" className="banner__btn">
-          our rooms
+      <Banner title="luxurious Hotels" subtitle="deluxe Hotels starting at $299">
+        <Link to="/Hotels" className="banner__btn">
+          our Hotels
         </Link>
       </Banner>
     </Hero>

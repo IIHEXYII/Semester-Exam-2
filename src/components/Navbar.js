@@ -30,10 +30,10 @@ export default class Nav extends Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/rooms">Rooms</Link>
+                <Link to="/hotels">Hotels</Link>
               </li>
               {/* <li>
-                <Link to="/rooms/:id">SingleRooms</Link>
+                <Link to="/Hotels/:id">Hotel Details</Link>
               </li> */}
               <AuthContent />
             </ul>

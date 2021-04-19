@@ -1,0 +1,29 @@
+.btn {
+       
+    &__delete {
+        margin: 5px auto 5px auto;
+        // box-shadow: 0px 1px 0px 0px #f0f7fa;
+        background:linear-gradient(to bottom, #ef3333 5%, #d20101 100%);
+        background-color:#ef3333;
+        border-radius:6px;
+        border:1px solid #d00505;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #5b6178;
+        padding: 10px 45px;
+        &:hover {
+            background:linear-gradient(to bottom, #d20101 5%, #ef3333 100%);
+            background-color:#d20101;
+        }
+        &:active {
+            position:relative;
+	        top:1px;
+        }
+    }
+}

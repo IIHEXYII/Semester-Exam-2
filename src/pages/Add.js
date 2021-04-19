@@ -46,7 +46,6 @@ const AddProduct = () => {
                             name='title'
                             placeholder='Title'
                             ref={register}
-                            defaultValue='Title of the product'
                         />
                         {errors.title && <p>{errors.title.message}</p>}
                     </div>
@@ -55,7 +54,15 @@ const AddProduct = () => {
                         <input className="card__input"
                             name='price'
                             placeholder='Price'
-                            defaultValue="Price of the product"
+                            ref={register}
+                            type='number'
+                        />
+                        {errors.price && <p>{errors.price.message}</p>}
+                    </div>
+                    <div>
+                        <input className="card__input"
+                            name='capacity'
+                            placeholder='Capacity'
                             ref={register}
                             type='number'
                         />
@@ -65,7 +72,6 @@ const AddProduct = () => {
                         <textarea className="card__input"
                             name='description'
                             placeholder='Description'
-                            defaultValue="Description of the product"
                             ref={register}
                             type='text'
                         />
@@ -76,7 +82,6 @@ const AddProduct = () => {
                             name='image_url'
                             placeholder='Image URL'
                             ref={register}
-                            defaultValue="Image URL for the product"
                             type='text'
                         />
                         {errors.image_url && <p>{errors.image_url.message}</p>}

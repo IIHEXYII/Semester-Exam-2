@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { RoomContext } from "../context/RoomContext";
+import { HotelContext } from "../context/HotelContext";
 
 export default class Featured extends Component {
-    static contextType = RoomContext;
+    static contextType = HotelContext;
     render() {
         return (
             <div>
-               <p>I'm a featured room</p>
+               <p>I'm a featured Hotel</p>
             </div>
         )
     }
