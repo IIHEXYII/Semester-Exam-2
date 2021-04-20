@@ -21,9 +21,9 @@ function App() {
           <Route exact path="/"component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path="/admin" component={Admin} />
-          <Route exact path="/Hotels" component={Hotels} />
+          <Route exact path="/hotels" component={Hotels} />
           <Route exact path="/addProduct" component={AddProduct} />
-          <Route exact path="/Hotel/:id" component={HotelDetails} />
+          <Route exact path="/hotel/:id" component={HotelDetails} />
           <Route component={Error404} />
         </Switch>
       </Router>

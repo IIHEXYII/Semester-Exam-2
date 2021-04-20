@@ -8,8 +8,9 @@ export const loginSchema = yup.object().shape({
 
 
 export const productSchema = yup.object().shape({
-  identifier: yup.string().required('⚠ Please enter a valid text'),
-  price: yup.string().required('⚠ Please enter a valid text'),
+  title: yup.string().required('⚠ Please enter a valid title'),
+  price: yup.string().required('⚠ Please enter a valid price'),
+  capacity: yup.string().required('⚠ Please enter a valid value'),
   description: yup.string().required('⚠ Please enter a valid text'),
-  image_url: yup.string().required('⚠ Please enter a valid text'),
+  image_url: yup.string().required('⚠ Please enter a valid URL'),
 });

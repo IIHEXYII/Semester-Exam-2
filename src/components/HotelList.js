@@ -2,12 +2,14 @@ import {useState, useEffect} from 'react';
 import { BASE_URL } from '../utils/constants';
 import axios from 'axios';
 import Item from './Item';
+import { Link } from "react-router-dom";
 
 function HotelList() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [products, setProducts] = useState(null);
-    // const product = 
+    const Loading = require('react-loading-animation');
+ 
     useEffect(() => {
       const fetchData = async() => {
         try {
@@ -28,7 +30,10 @@ function HotelList() {
     }, []);
   
     if (loading) {
-        return <h1>Loading...</h1>;
+        return <>
+                <Loading />
+                <h1>Loading...</h1>
+                </>;
     }
     
     if (error) {
@@ -41,7 +46,9 @@ function HotelList() {
            {products.map(product => {
                   return (
                     <div key={product.id} className="itemList__component">
-                          <Item {...product} />                
+                      <Item {...product} />
+                       <Link to={`/hotel/${product.id}`} key={product.id}> Temp link               
+                       </Link>
                     </div>
                   );
               })}

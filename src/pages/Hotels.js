@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import HotelList from '../components/HotelList';
-import Title from '../components/Title';
 function Hotels() {
     return (
         <>

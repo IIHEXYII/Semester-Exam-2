@@ -3,42 +3,44 @@ import { useState } from 'react';
 import { PRODUCTS_PATH } from '../utils/constants';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import {productSchema} from '../utils/validation/Schemas';
+import { productSchema } from '../utils/validation/Schemas';
 
 const AddProduct = () => {
-    const http = useAxios();
-    const [submitting, setSubmitting] = useState(false);
-    const [postError, setPostError] = useState(null);    
-    const [success, setSuccess] = useState(null);
+        const http = useAxios();
+        const [submitting, setSubmitting] = useState(false);
+        const [postError, setPostError] = useState(null);
+        const [success, setSuccess] = useState(null);
 
-    const { register, handleSubmit, errors } = useForm({
-        resolver: yupResolver(productSchema)
-    });
+        const { register, handleSubmit, errors } = useForm({
+            resolver: yupResolver(productSchema)
+        });
 
-    const onSubmit = async data => {
-        setSubmitting(true);
-        setPostError(null);
+        const onSubmit = async data => {
+            setSubmitting(true);
+            setPostError(null);
+            
+            console.log(data);
 
-        console.log(data);
+            try {
+                const response = await http.post(`${PRODUCTS_PATH}`, data);
+                console.log('response', response.data);
+                setSuccess(true);
+            } catch (error) {
+                console.log('error', error);
+                setPostError(error.toString());
+            } finally {
+                setSubmitting(false);
+            }
 
-        try {
-            const response = await http.post(`${PRODUCTS_PATH}`, data);
-            console.log('response', response.data);
-            setSuccess(true);
-        } catch (error) {
-            console.log('error', error);
-            setPostError(error.toString());
-        } finally {
-            setSubmitting(false);
-        }
-    };
+        };
+
 
     return (
         <>
         <div className="pageContent">
             <h1 className="header">Add Product</h1>
-            <div className="card">
-            <form onSubmit={handleSubmit(onSubmit)}>
+             <div className="card">
+                <form onSubmit={handleSubmit(onSubmit)}>
                 {postError && <p>{postError}</p>}
                 <fieldset className="card__field" disabled={submitting}>
                     <div>

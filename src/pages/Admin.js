@@ -12,7 +12,9 @@ const Admin = () => {
     const http = useAxios();
   // eslint-disable-next-line react-hooks/exhaustive-deps
     const [render, setRender] = useState(null);
+    const Loading = require('react-loading-animation');
 
+    
     const deleteProduct = async (slug, productTitle) => {
       try {
         const response = await http.delete(`${PRODUCTS_PATH}/${slug}`);
@@ -22,6 +24,7 @@ const Admin = () => {
         console.log(error);
       } finally {
         setRender(render + 1);
+
       }
     };
 
@@ -39,11 +42,13 @@ const Admin = () => {
         getProducts();
       }, []);
 
+
     if (!auth) {
         history.push('/login');
       }
       if (!products) {
-        return <p>Loading...</p>;
+        return <Loading />;
+
       }
         return (
           <>
