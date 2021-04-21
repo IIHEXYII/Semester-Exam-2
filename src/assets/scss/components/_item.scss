@@ -1,6 +1,6 @@
 .itemList{
     display:flex;
-    // justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
         &__component {
             margin: 10px auto;
@@ -75,6 +75,9 @@
             width: 100%;
             display: block;
             transition: $mainTransition;
+        }
+        &__text-container {
+            padding: 10px 0 10px 0;
         }
         &__text {
             text-transform: none;

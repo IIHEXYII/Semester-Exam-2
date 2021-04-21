@@ -64,6 +64,9 @@
         font-size: 1rem;
         font-weight: 600;
         letter-spacing: $mainSpacing;
+        &:hover {
+          color: $primaryRed;
+        }
       }
 }
 .nav-align {
@@ -98,11 +101,9 @@ margin: 1rem auto 0 auto;
           }
           &__link a {
             margin: 0 1rem;
-            // padding: 0.5rem 0;
           }
           &__logout {
             margin: 0 1rem;
-            // padding: 0.5rem 0;
             color: inherit;
             font: inherit;
             cursor: pointer;

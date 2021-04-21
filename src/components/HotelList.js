@@ -32,7 +32,7 @@ function HotelList(props) {
     if (loading) {
         return <>
                 <Loading />
-                <h1 className="loading">Loading...</h1>
+                <h1 className="loading">Loading</h1>
                 </>;
     }
     
@@ -47,7 +47,8 @@ function HotelList(props) {
                   return (
                     <div key={product.id} className="itemList__component">
                       <Item {...product} />
-                       <Link to={`/hotel/${product.id}`} key={product.id}> Temp link               
+                       <Link className="btn__btn" to={`/hotel/${product.id}`} key={product.id}>
+                          More               
                        </Link>
                     </div>
                   );

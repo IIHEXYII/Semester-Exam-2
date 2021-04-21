@@ -45,50 +45,62 @@ const AddProduct = () => {
                 {postError && <p>{postError}</p>}
                 <fieldset className="addContainer__field" disabled={submitting}>
                     <div>
+                        <label className="addContainer__label" for="title" >Title</label>
                         <input className="addContainer__input"
+                            id='title'
                             name='title'
                             placeholder='Title'
                             ref={register}
                         />
-                        {errors.title && <p>{errors.title.message}</p>}
+                        {errors.title && <p className="alert">{errors.title.message}</p>}
                     </div>
-
                     <div>
+                    <label className="addContainer__label" for="img" >Image</label>
                         <input className="addContainer__input"
-                            name='price'
-                            placeholder='Price'
-                            ref={register}
-                            type='number'
-                        />
-                        {errors.price && <p>{errors.price.message}</p>}
-                    </div>
-                    <div>
-                        <input className="addContainer__input"
-                            name='capacity'
-                            placeholder='Capacity'
-                            ref={register}
-                            type='number'
-                        />
-                        {errors.price && <p>{errors.price.message}</p>}
-                    </div>
-                    <div>
-                        <textarea className="addContainer__input"
-                            name='description'
-                            placeholder='Description'
-                            ref={register}
-                            type='text'
-                        />
-                        {errors.description && <p>{errors.description.message}</p>}
-                    </div>
-                    <div>
-                        <input className="addContainer__input"
+                            id="img"
                             name='image_url'
                             placeholder='Image Url'
                             ref={register}
                             type='text'
                         />
-                        {errors.image_url && <p>{errors.image_url.message}</p>}
+                        {errors.image_url && <p className="alert">{errors.image_url.message}</p>}
                     </div>
+                    <div>
+                    <label className="addContainer__label" for="price" >Price</label>
+                        <input className="addContainer__input"
+                            id='price'
+                            name='price'
+                            placeholder='Price'
+                            ref={register}
+                            type='number'
+                        />
+                        {errors.price && <p className="alert">{errors.price.message}</p>}
+                    </div>
+                    
+                    <div>
+                    <label className="addContainer__label" for="capacity" >Capacity</label>
+                        <input className="addContainer__input"
+                            id='capacity'
+                            name='capacity'
+                            placeholder='Capacity'
+                            ref={register}
+                            type='number'
+                        />
+                        {errors.capacity && <p className="alert">{errors.capacity.message}</p>}
+                    </div>
+                    <div>
+                    <label className="addContainer__label" for="desc" >Description</label>
+                        <textarea className="addContainer__input"
+                            id="desc"
+                            name='description'
+                            placeholder='Description'
+                            ref={register}
+                            type='text'
+                        />
+                        {errors.description && <p className="alert">{errors.description.message}</p>}
+                       
+                    </div>
+                    
                     <button className="btn__submit" type='submit'>{submitting ? 'Adding ...' : 'Add'}</button>
                 </fieldset>
             </form>

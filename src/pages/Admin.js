@@ -6,6 +6,8 @@ import { PRODUCTS_PATH } from '../utils/constants';
 import Item from '../components/Item';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
+import { Link } from "react-router-dom"
+
 
 const Admin = () => {
     const [auth] = useContext(AuthContext);
@@ -51,7 +53,7 @@ const Admin = () => {
       if (!products) {
         return <>
                   <Loading />;
-                  <h1 className="loading">Loading...</h1>
+                  <h1 className="loading">Loading</h1>
               </>
       }
         return (

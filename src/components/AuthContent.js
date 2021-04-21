@@ -16,7 +16,7 @@ function Nav() {
         {auth ? (
           <>
           <li>
-            <Link to="/addProduct">Add New</Link>
+            <Link to="/addproduct">Add New</Link>
             </li>
            <Link className="navbar__link" to='/admin'>Admin</Link>
            <li>

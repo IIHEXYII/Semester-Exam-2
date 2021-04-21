@@ -12,5 +12,5 @@ export const productSchema = yup.object().shape({
   price: yup.string().required('⚠ Please enter a valid price'),
   capacity: yup.string().required('⚠ Please enter a valid value'),
   description: yup.string().required('⚠ Please enter a valid text'),
-  image_url: yup.string().required('⚠ Please enter a valid URL'),
+  image_url: yup.string().required('⚠ Please enter a valid url'),
 });
