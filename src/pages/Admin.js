@@ -4,6 +4,8 @@ import AuthContext from '../context/AuthContext';
 import useAxios from '../utils/useAxios';
 import { PRODUCTS_PATH } from '../utils/constants';
 import Item from '../components/Item';
+import Hero from '../components/Hero';
+import Banner from '../components/Banner';
 
 const Admin = () => {
     const [auth] = useContext(AuthContext);
@@ -47,13 +49,19 @@ const Admin = () => {
         history.push('/login');
       }
       if (!products) {
-        return <Loading />;
-
+        return <>
+                  <Loading />;
+                  <h1 className="loading">Loading...</h1>
+              </>
       }
         return (
           <>
             <div className="pageContent">
-              <h1 className="header">List of Content</h1>
+            <Hero hero="AdminHero">
+            <Banner title="Admin Panel">
+                </Banner>
+            {/* <h1 className="header">Admin Panel</h1> */}
+            </Hero>
               <div className="itemList">
                 {products.map(product => {
                         return (

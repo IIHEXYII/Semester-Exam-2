@@ -7,6 +7,7 @@ import AuthContext from '../context/AuthContext';
 import {loginSchema} from '../utils/validation/Schemas';
 import { useHistory } from "react-router-dom";
 import Hero from '../components/Hero';
+
 const Login = () => {
   const [submitting, setSubmitting] = useState(false);
   const [loginError, setLoginError] = useState(null);
@@ -61,8 +62,8 @@ const Login = () => {
               />
               {errors.password && <p className="alert">{errors.password.message}</p>}
             </div>
+          <button className="btn__submit" type='submit'>{submitting ? 'Loggin in...' : 'Login'}</button>
           </div>
-          <button className="login__submit" type='submit'>{submitting ? 'Loggin in...' : 'Login'}</button>
         </fieldset>
       </form>
       </div>

@@ -26,4 +26,8 @@ body {
     font-size:2rem;
     padding:$mainSpacing;
     text-transform: uppercase;
+    margin: $secondarySpacing;
+}
+.loading {
+    text-align: center;
 }

@@ -1,10 +1,10 @@
-import {useState, useEffect} from 'react';
-import { BASE_URL } from '../utils/constants';
-import axios from 'axios';
-import Item from './Item';
-import { Link } from "react-router-dom";
+import {useState, useEffect} from 'react'
+import { BASE_URL } from '../utils/constants'
+import axios from 'axios'
+import Item from './Item'
+import { Link } from "react-router-dom"
 
-function HotelList() {
+function HotelList(props) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [products, setProducts] = useState(null);
@@ -32,14 +32,14 @@ function HotelList() {
     if (loading) {
         return <>
                 <Loading />
-                <h1>Loading...</h1>
+                <h1 className="loading">Loading...</h1>
                 </>;
     }
     
     if (error) {
         return <h1>An error occurred</h1>;
     } 
-  
+
     return (
       <>
         <div className="itemList">
@@ -57,3 +57,5 @@ function HotelList() {
     );
   }
   export default HotelList;
+
+  

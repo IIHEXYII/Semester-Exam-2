@@ -1,10 +1,13 @@
 .login {
-    margin: 0 auto 0 auto;
-    width: 380px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-    margin-top:10em;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.7);
+    color: $mainWhite;
+    padding: 2rem 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: $mainSpacing;
+    border-radius:$mainBorderRadius;
+    min-width: 350px;
     
     &__title {
         font-size: 35px;
@@ -14,11 +17,12 @@
         color: #fff;
         user-select: none;
         border-radius: 15px 15px 0 0;
-        background-color:$primaryBgColor;
-        background-color:#33bdef;
+    }
+    &__form {
+        min-width: 360px;
     }
     &__inputContent {
-        padding: 10px 30px 50px 30px;
+        padding: 10px 30px 35px 30px;
         display: flex;
         flex-direction: column;
     }
@@ -41,34 +45,4 @@
         border-radius: 25px;
         transition: all 0.3s ease;
     }  
-  
-        // Don't forget to fix the  button generated colors to match site theme ! 
-        //----------------------------------------------------------------------
-
-    &__submit {
-        margin: 0 0 25px 110px;
-        box-shadow: 0px 1px 0px 0px #f0f7fa;
-        background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
-        background-color:#33bdef;
-        border-radius:6px;
-        border:1px solid #057fd0;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        font-size:15px;
-        font-weight:bold;
-        padding:6px 24px;
-        text-decoration:none;
-        text-shadow:0px -1px 0px #5b6178;
-        padding: 10px 45px;
-        &:hover {
-            background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
-            background-color:#019ad2;
-        }
-        &:active {
-            position:relative;
-	        top:1px;
-        }
-    }
 }

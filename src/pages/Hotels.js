@@ -3,6 +3,8 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import HotelList from '../components/HotelList';
+// import AutoComplete from '../components/AutoComplete';
+
 function Hotels() {
     return (
         <>
@@ -14,6 +16,7 @@ function Hotels() {
                     </Link>
                 </Banner>
             </Hero>
+            {/* <AutoComplete /> */}
             <HotelList />
         </div>
         </>

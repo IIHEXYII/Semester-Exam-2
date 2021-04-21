@@ -4,7 +4,7 @@ import { PRODUCTS_PATH } from '../utils/constants';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { productSchema } from '../utils/validation/Schemas';
-
+import Hero from '../components/Hero';
 const AddProduct = () => {
         const http = useAxios();
         const [submitting, setSubmitting] = useState(false);
@@ -38,13 +38,14 @@ const AddProduct = () => {
     return (
         <>
         <div className="pageContent">
+        <Hero hero="AddHero">
+            <div className="addContainer">
             <h1 className="header">Add Product</h1>
-             <div className="card">
                 <form onSubmit={handleSubmit(onSubmit)}>
                 {postError && <p>{postError}</p>}
-                <fieldset className="card__field" disabled={submitting}>
+                <fieldset className="addContainer__field" disabled={submitting}>
                     <div>
-                        <input className="card__input"
+                        <input className="addContainer__input"
                             name='title'
                             placeholder='Title'
                             ref={register}
@@ -53,7 +54,7 @@ const AddProduct = () => {
                     </div>
 
                     <div>
-                        <input className="card__input"
+                        <input className="addContainer__input"
                             name='price'
                             placeholder='Price'
                             ref={register}
@@ -62,7 +63,7 @@ const AddProduct = () => {
                         {errors.price && <p>{errors.price.message}</p>}
                     </div>
                     <div>
-                        <input className="card__input"
+                        <input className="addContainer__input"
                             name='capacity'
                             placeholder='Capacity'
                             ref={register}
@@ -71,7 +72,7 @@ const AddProduct = () => {
                         {errors.price && <p>{errors.price.message}</p>}
                     </div>
                     <div>
-                        <textarea className="card__input"
+                        <textarea className="addContainer__input"
                             name='description'
                             placeholder='Description'
                             ref={register}
@@ -80,20 +81,22 @@ const AddProduct = () => {
                         {errors.description && <p>{errors.description.message}</p>}
                     </div>
                     <div>
-                        <input className="card__input"
+                        <input className="addContainer__input"
                             name='image_url'
-                            placeholder='Image URL'
+                            placeholder='Image Url'
                             ref={register}
                             type='text'
                         />
                         {errors.image_url && <p>{errors.image_url.message}</p>}
                     </div>
-                    <button type='submit'>{submitting ? 'Adding ...' : 'Add'}</button>
+                    <button className="btn__submit" type='submit'>{submitting ? 'Adding ...' : 'Add'}</button>
                 </fieldset>
             </form>
-        </div>
-            {success ? <p>Listing of PRODUCT was added</p> : null}
+                {success ? <p>Listing of PRODUCT was added</p> : null}
             </div>
+            </Hero>
+        </div>
+          
         </>
     );
 };

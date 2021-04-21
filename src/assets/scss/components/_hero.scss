@@ -1,5 +1,5 @@
-.defaultHero, .HotelsHero {
-    min-height: calc(100vh - 66px);
+.defaultHero, .HotelsHero, .AddHero, .AdminHero {
+    min-height: calc(100vh - 85px);
     background: url("../../images/fabio-fistarol-qai_unsplash.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -7,5 +7,13 @@
   }
   .HotelsHero {
     background-image: url("../../images/sebastian-pena-lambarri-unsplash.jpg");
-    min-height: 60vh;
+    min-height: 50vh;
+  }
+  .AddHero {
+    background-image: url("../../images/martha-dominguez-de-gouveia-unsplash.jpg");
+  }
+  .AdminHero {
+    background-image: url("../../images/sara-dubler-Koei_unsplash.jpg");
+    min-height: 25vh;
+
   }
