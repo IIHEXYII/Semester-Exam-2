@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
     <div className="pageContent">
     <Hero>
-      <Banner title="luxurious Hotels" subtitle="deluxe Hotels starting at $299">
+      <Banner title="Hotel Booking" subtitle="Find your dream hotel today!">
         <Link to="/Hotels" className="banner__btn">
           our Hotels
         </Link>

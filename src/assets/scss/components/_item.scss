@@ -55,7 +55,6 @@
     }
 }
 
-
 .item {
     // background:skyblue;
             //placeholder
@@ -75,6 +74,14 @@
             width: 100%;
             display: block;
             transition: $mainTransition;
+            display: block;
+            margin: 0 0 1rem;
+            border: 4px solid $primaryColor;
+            box-sizing: border-box;
+            position: relative;
+            object-fit: cover;
+            max-height: 260px;
+            border-radius: $mainBorderRadius;
         }
         &__text-container {
             padding: 10px 0 10px 0;
@@ -84,4 +91,66 @@
             padding: $mainSpacing;
         }
 }
+
+// ---------- END OF ITEM -------------
+.placeholder {
+    width:100%;
+    height:575px;
+    background: green;
+    padding: 1rem;
+}
+// ---------- START OF ITEMDETAILS -------------
+.itemDetailsList {
+    display:flex;
+    justify-content: flex-start;
+        &__component {
+            margin: 10px auto;
+            padding: 20px;
+            max-width: 33%;
+            min-width: 30%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: $mainBorderRadius;
+            display: flex;
+            flex-wrap: inherit;
+            
+        }
+}
+
+.itemDetails {
+    // background:skyblue;
+            //placeholder
+             height:90%;
+             width: 100%;
+
+    padding: 2rem 1rem;
+    text-transform: capitalize;
+    border-radius: $mainBorderRadius;
+    
+   
+    transition: 0.3s;
+        &__title {
+            font-size: 2.0rem;
+        }
+        &__img {
+            width: 100%;
+            display: block;
+            transition: $mainTransition;
+            display: block;
+            margin: 0 0 1rem;
+            border: 4px solid $primaryColor;
+            box-sizing: border-box;
+            position: relative;
+            object-fit: cover;
+            max-height: 260px;
+            border-radius: $mainBorderRadius;
+        }
+        &__text-container {
+            padding: 10px 0 10px 0;
+        }
+        &__text {
+            text-transform: none;
+            padding: $mainSpacing;
+        }
+}
+// ---------- END OF ITEMDETAILS -------------
 

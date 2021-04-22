@@ -17,6 +17,7 @@ import { BASE_URL } from '../utils/constants'
 import axios from 'axios'
 import Item from './Item'
 import { Link } from "react-router-dom"
+import Title from '../components/Title';
 
 function Featured() {
     const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ function Featured() {
         try {
           const response = await axios.get(`${BASE_URL}/products`);
             console.log(response);
+            
           if (response.status === 200) {
             setProducts(response.data);
           } else {
@@ -57,6 +59,7 @@ function Featured() {
 
     return (
       <>
+       <Title title="Featured Hotels" />
         <div className="itemList">
            {featuredItem.map(product => {
                   return (
