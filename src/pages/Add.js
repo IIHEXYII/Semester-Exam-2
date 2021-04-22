@@ -45,7 +45,7 @@ const AddProduct = () => {
                 {postError && <p>{postError}</p>}
                 <fieldset className="addContainer__field" disabled={submitting}>
                     <div>
-                        <label className="addContainer__label" for="title" >Title</label>
+                        <label className="addContainer__label" htmlFor="title" >Title</label>
                         <input className="addContainer__input"
                             id='title'
                             name='title'
@@ -55,7 +55,7 @@ const AddProduct = () => {
                         {errors.title && <p className="alert">{errors.title.message}</p>}
                     </div>
                     <div>
-                    <label className="addContainer__label" for="img" >Image</label>
+                    <label className="addContainer__label" htmlFor="img" >Image</label>
                         <input className="addContainer__input"
                             id="img"
                             name='image_url'
@@ -66,7 +66,7 @@ const AddProduct = () => {
                         {errors.image_url && <p className="alert">{errors.image_url.message}</p>}
                     </div>
                     <div>
-                    <label className="addContainer__label" for="price" >Price</label>
+                    <label className="addContainer__label" htmlFor="price" >Price</label>
                         <input className="addContainer__input"
                             id='price'
                             name='price'
@@ -78,7 +78,7 @@ const AddProduct = () => {
                     </div>
                     
                     <div>
-                    <label className="addContainer__label" for="capacity" >Capacity</label>
+                    <label className="addContainer__label" htmlFor="capacity" >Capacity</label>
                         <input className="addContainer__input"
                             id='capacity'
                             name='capacity'
@@ -89,7 +89,7 @@ const AddProduct = () => {
                         {errors.capacity && <p className="alert">{errors.capacity.message}</p>}
                     </div>
                     <div>
-                    <label className="addContainer__label" for="desc" >Description</label>
+                    <label className="addContainer__label" htmlFor="desc" >Description</label>
                         <textarea className="addContainer__input"
                             id="desc"
                             name='description'

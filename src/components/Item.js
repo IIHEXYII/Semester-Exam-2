@@ -1,5 +1,5 @@
 const Item = props => {
-    const { title, description, image_url, price } = props;
+    const { title, description, image_url, price, featured } = props;
     return (
       <div className="item">
         <h2 className="item__title">{title}</h2>

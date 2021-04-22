@@ -4,7 +4,7 @@ import axios from 'axios'
 import Item from './Item'
 import { Link } from "react-router-dom"
 
-function HotelList(props) {
+function HotelList() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [products, setProducts] = useState(null);
