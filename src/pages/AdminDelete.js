@@ -6,8 +6,6 @@ import { PRODUCTS_PATH } from '../utils/constants';
 import Item from '../components/Item';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
-// import { Link } from "react-router-dom";
-
 
 const Admin = () => {
     const [auth] = useContext(AuthContext);
@@ -60,7 +58,7 @@ const Admin = () => {
           <>
             <div className="pageContent">
             <Hero hero="AdminHero">
-            <Banner title="Admin Panel">
+            <Banner title="Delete Hotels">
                 </Banner>
             {/* <h1 className="header">Admin Panel</h1> */}
             </Hero>

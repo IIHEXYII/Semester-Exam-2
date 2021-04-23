@@ -30,7 +30,7 @@
       }
       &__link{
         height: 0;
-        overflow: hidden;
+        // overflow: hidden;
         transition: $mainTransition;
         list-style-type: none;
       }
@@ -68,6 +68,11 @@
           color: $primaryRed;
         }
       }
+      &__span {
+      }
+      &__span--alt {
+        margin-top: 1rem;
+      }
 }
 .nav-align {
 margin: 1rem auto 0 auto;
@@ -80,7 +85,8 @@ margin: 1rem auto 0 auto;
 
 }
 
-@media screen and (min-width: 828px) {
+
+@media screen and (min-width: 829px) {
     .navbar{
       &__title {
         max-width: 100px;
@@ -121,4 +127,30 @@ margin: 1rem auto 0 auto;
             height: 50px;
             list-style: none;
         }
+
+        .mobile {
+          display: none;
+        }
   }
+
+@media screen and (max-width: 828px) {
+  .navbar{
+    &__link{
+      overflow: hidden;
+    }
+    &__span {
+      display: none;
+     
+    }
+    &__span--alt {
+      display: none;
+
+    }
+  }
+  .mobile {
+    display: block;
+  }
+
+}
+
+

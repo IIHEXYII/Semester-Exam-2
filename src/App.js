@@ -5,9 +5,11 @@ import Navbar from './components/Navbar';
 //Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Admin from "./pages/Admin";
+import Delete from "./pages/AdminDelete";
 import Hotels from "./pages/Hotels";
-import AddProduct from "./pages/Add";
+import Add from "./pages/AdminAdd";
+import Enquiry from './pages/AdminEnquiry';
+import Messages from './pages/AdminMessage';
 import HotelDetails from "./pages/HotelDetails";
 import Error404 from "./pages/Error404";
 // Pages End
@@ -20,10 +22,12 @@ function App() {
         <Switch>
           <Route exact path="/"component={Home} />
           <Route exact path='/login' component={Login} />
-          <Route exact path="/admin" component={Admin} />
           <Route exact path="/hotels" component={Hotels} />
-          <Route exact path="/addProduct" component={AddProduct} />
           <Route exact path="/hotel/:id" component={HotelDetails} />
+          <Route exact path="/admin/add-product" component={Add} />
+          <Route exact path="/admin/delete-product" component={Delete} />
+          <Route exact path="/admin/enquiry" component={Enquiry} />
+          <Route exact path="/admin/Messages" component={Messages} />
           <Route component={Error404} />
         </Switch>
       </Router>

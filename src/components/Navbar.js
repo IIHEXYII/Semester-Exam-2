@@ -29,13 +29,16 @@ export default class Nav extends Component {
               <li>
                 <Link to="/">Home</Link>
               </li>
+              <span className="navbar__span">|</span>
               <li>
                 <Link to="/hotels">Hotels</Link>
               </li>
+              <span className="navbar__span">|</span>
               {/* <li>
                 <Link to="/Hotels/:id">Hotel Details</Link>
               </li> */}
               <AuthContent />
+              
             </ul>
           </div>
         </nav>

@@ -28,7 +28,7 @@ const Login = () => {
       const response = await axios.post(`${BASE_URL}${AUTH_PATH}`, data);
       console.log('response', response.data);
       setAuth(response.data);
-      history.push("/admin");
+      history.push("/");
     } catch (error) {
       console.log('error', error);
       setLoginError(error.toString());
