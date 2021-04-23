@@ -17,6 +17,7 @@ import { BASE_URL } from '../utils/constants'
 import axios from 'axios'
 import ItemDetails from '../components/ItemDetails'
 import { Link, useParams } from "react-router-dom"
+import AddEnquiry from '../components/AddEnquiry'
 
 function SingleHotels() {
     const [loading, setLoading] = useState(true);
@@ -64,7 +65,7 @@ function SingleHotels() {
                       <ItemDetails {...products} />
                     </div>
                 <div className="placeholder">
-                    <h1> Hello World!</h1>
+                    <AddEnquiry />
                 </div>
             </div>
         </div>

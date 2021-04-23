@@ -84,3 +84,14 @@
     display: block;
   }
   
+
+  
+@media screen and (max-width: 828px) {
+  .mobile {
+    display: block;
+  }
+  .menu-container {
+    // background: forestgreen;
+    display: none;
+  }
+}
