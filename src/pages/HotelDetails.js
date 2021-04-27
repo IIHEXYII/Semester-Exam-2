@@ -1,22 +1,8 @@
-// import React from 'react'
-// // import HotelDetails from '../components/HotelDetails'
-// export default function SingleHotels() {
-//     return (
-//         <>
-//             <div className="pageContent">
-//                 <h1>Single Hotels looking for love near you!</h1>
-//                 <p>Find your Hotel here.</p>
-//                 {/* <HotelDetails /> */}
-//             </div>
-//         </>
-//     )
-// }
-
 import {useState, useEffect} from 'react'
 import { BASE_URL } from '../utils/constants'
 import axios from 'axios'
 import ItemDetails from '../components/ItemDetails'
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import AddEnquiry from '../components/AddEnquiry'
 
 function SingleHotels() {
@@ -64,9 +50,9 @@ function SingleHotels() {
                     <div key={products.id} className="itemDetailsList__component">
                       <ItemDetails {...products} />
                     </div>
-                <div className="placeholder">
+                {/* <div className="placeholder"> */}
                     <AddEnquiry />
-                </div>
+                {/* </div> */}
             </div>
         </div>
       </>

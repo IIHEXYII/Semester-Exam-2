@@ -16,7 +16,7 @@ const Admin = () => {
     const [render, setRender] = useState(null);
     const Loading = require('react-loading-animation');
 
-    
+
     const deleteProduct = async (slug, productTitle) => {
       try {
         const response = await http.delete(`${PRODUCTS_PATH}/${slug}`);

@@ -107,13 +107,12 @@
         &__component {
             margin: 10px auto;
             padding: 20px;
-            max-width: 33%;
-            min-width: 30%;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            max-width: 40%;
+            // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             border-radius: $mainBorderRadius;
             display: flex;
             flex-wrap: inherit;
-            
+            min-width: 550px;
         }
 }
 
@@ -154,4 +153,23 @@
         }
 }
 // ---------- END OF ITEMDETAILS -------------
+
+
+@media screen and (max-width: 1000px) {
+    .itemDetailsList {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 666px) { 
+
+
+}
+@media screen and (max-width: 555px) { 
+    .itemDetailsList {
+        &__component {
+          
+            min-width: 350px;
+        }
+}
+}
 

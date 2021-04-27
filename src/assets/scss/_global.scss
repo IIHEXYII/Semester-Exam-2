@@ -14,7 +14,11 @@ body {
 }
 
 .alert {
-    color: red;
+    color: #d30000;
+}
+.alert-container {
+    font-size: 0.9rem;
+    margin: 3px 10px;
 }
 
 .pageContent {
@@ -30,4 +34,6 @@ body {
 }
 .loading {
     text-align: center;
+    margin-top: 80px;
+
 }
