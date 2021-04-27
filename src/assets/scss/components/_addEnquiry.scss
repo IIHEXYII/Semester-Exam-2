@@ -51,7 +51,7 @@
     }
 }
 .textarea {
-    width: 430px;
+    width: 630px;
     height: 150px;
 }
 
@@ -67,15 +67,15 @@ input[type=number] {
 }
 
 @media screen and (max-width: 1200px) {
-    .textarea {
-        width: 370px;
-    }
+   
     .enquiry {
         &__input {
             width: 230px;
         }
     }
-    
+    .textarea {
+        width: 430px;
+    }
 }
 
 

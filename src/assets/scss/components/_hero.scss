@@ -1,4 +1,4 @@
-.defaultHero, .HotelsHero, .AddHero, .AdminHero {
+.defaultHero, .HotelsHero, .AddHero, .AdminHero, .ContactHero  {
     min-height: calc(100vh - 85px);
     background: url("../../images/fabio-fistarol-qai_unsplash.jpg") center/cover no-repeat;
     display: flex;
@@ -15,5 +15,11 @@
   .AdminHero {
     background-image: url("../../images/sara-dubler-Koei_unsplash.jpg");
     min-height: 45vh;
+
+  }
+
+  .ContactHero {
+    background-image: url("../../images/sara-dubler-Koei_unsplash.jpg");
+    min-height: 35vh;
 
   }

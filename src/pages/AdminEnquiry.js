@@ -42,7 +42,7 @@ const AdminEnquiry = () => {
           <>
             <div className="pageContent">
             <Hero hero="AdminHero">
-            <Banner title="Delete Hotels">
+            <Banner title="Booking Enquiries">
                 </Banner>
             {/* <h1 className="header">Admin Panel</h1> */}
             </Hero>

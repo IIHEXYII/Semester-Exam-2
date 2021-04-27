@@ -38,8 +38,11 @@
         color: $primaryColor;
     }
   }
+ 
 }
-
+.banner-box {
+  margin: 3rem;
+}
 
 @media screen and (min-width: 576px) {
   .banner {

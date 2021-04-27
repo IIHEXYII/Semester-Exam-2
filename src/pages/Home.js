@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import Service from '../components/Services';
 import Featured from '../components/Featured';
-
+import Contact from '../components/Contact';
 const HomePage = () => {
   return (
     <>
@@ -18,6 +18,14 @@ const HomePage = () => {
     </Hero>
     <Service />
     <Featured />
+    <Hero hero="ContactHero">
+      <div className="banner-box">
+      <Banner title="Contact us" subtitle="we are here for you if you need anything.">
+        <Contact />
+      </Banner>
+      </div>
+    </Hero>
+   
     </div>
     </>
   );

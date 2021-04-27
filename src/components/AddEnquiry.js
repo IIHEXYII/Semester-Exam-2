@@ -1,6 +1,6 @@
 import useAxios from '../utils/useAxios';
 import { useState } from 'react';
-import { PRODUCTS_PATH } from '../utils/constants';
+import { ENQUIRIES_PATH } from '../utils/constants';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { enquirySchema } from '../utils/validation/Schemas';
@@ -13,13 +13,12 @@ const AddEnquiry = () => {
         const [submitting, setSubmitting] = useState(false);
         const [postError, setPostError] = useState(null);
         const [success, setSuccess] = useState(null);
+        const [startDate, setStartDate] = useState(new Date);
+        const [endDate, setEndDate] = useState(new Date);
 
         const { register, handleSubmit, errors } = useForm({
             resolver: yupResolver(enquirySchema)
         });
-
-            const [startDate, setStartDate] = useState(new Date);
-            const [endDate, setEndDate] = useState(new Date);
 
         const onSubmit = async data => {
             setSubmitting(true);
@@ -28,7 +27,7 @@ const AddEnquiry = () => {
             console.log(data);
 
             try {
-                const response = await http.post(`${PRODUCTS_PATH}`, data);
+                const response = await http.post(`${ENQUIRIES_PATH}`, data);
                 console.log('response', response.data);
                 setSuccess(true);
             } catch (error) {
@@ -46,7 +45,7 @@ const AddEnquiry = () => {
             <div className="enquiry">
             {/* <h1 className="header">Add Product</h1> */}
                 <form className="enquiry__form"  onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="header">Add Product</h1>
+                <h1 className="header">Book Hotel</h1>
                 {postError && <p>{postError}</p>}
                 <fieldset className="enquiry__field" disabled={submitting}>
                    <div className="enquiry__container-div ">
@@ -54,7 +53,7 @@ const AddEnquiry = () => {
                         <label className="enquiry__label" htmlFor="firstName" >First Name</label>
                         <input className="enquiry__input"
                             id='firstName'
-                            name='firstName'
+                            name='first_Name'
                             placeholder='John'
                             ref={register}
                         />
@@ -66,7 +65,7 @@ const AddEnquiry = () => {
                         <label className="enquiry__label" htmlFor="LastName" >Last Name</label>
                         <input className="enquiry__input"
                             id='LastName'
-                            name='LastName'
+                            name='Last_Name'
                             placeholder='Doe'
                             ref={register}
                         />
