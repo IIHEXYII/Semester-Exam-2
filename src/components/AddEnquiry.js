@@ -53,7 +53,7 @@ const AddEnquiry = () => {
                         <label className="enquiry__label" htmlFor="firstName" >First Name</label>
                         <input className="enquiry__input"
                             id='firstName'
-                            name='first_Name'
+                            name='first_name'
                             placeholder='John'
                             ref={register}
                         />
@@ -62,10 +62,10 @@ const AddEnquiry = () => {
                         </div>
                     </div>
                     <div className="enquiry__div">
-                        <label className="enquiry__label" htmlFor="LastName" >Last Name</label>
+                        <label className="enquiry__label" htmlFor="lastName" >Last Name</label>
                         <input className="enquiry__input"
-                            id='LastName'
-                            name='Last_Name'
+                            id='lastName'
+                            name='last_name'
                             placeholder='Doe'
                             ref={register}
                         />
@@ -160,7 +160,7 @@ const AddEnquiry = () => {
                 </fieldset>
             </form>
 
-                {success ? <p>Listing of PRODUCT was added</p> : null}
+                {success ? <p>Booking was Successful</p> : null}
         </div>
           
         </>

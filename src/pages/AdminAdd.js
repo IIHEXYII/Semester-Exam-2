@@ -104,7 +104,7 @@ const AddProduct = () => {
                     <button className="btn__submit" type='submit'>{submitting ? 'Adding ...' : 'Add'}</button>
                 </fieldset>
             </form>
-                {success ? <p>Listing of PRODUCT was added</p> : null}
+                {success ? <p>Listing of Hotel was added</p> : null}
             </div>
             </Hero>
         </div>
