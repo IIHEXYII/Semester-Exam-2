@@ -18,13 +18,13 @@ const HomePage = () => {
     </Hero>
     <Service />
     <Featured />
-    <Hero hero="ContactHero">
+    {/* <Hero hero="ContactHero">
       <div className="banner-box">
       <Banner title="Contact us" subtitle="we are here for you if you need anything.">
         <Contact />
       </Banner>
       </div>
-    </Hero>
+    </Hero> */}
    
     </div>
     </>

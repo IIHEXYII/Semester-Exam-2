@@ -34,9 +34,11 @@ export default class Nav extends Component {
                 <Link to="/hotels">Hotels</Link>
               </li>
               <span className="navbar__span">|</span>
-              {/* <li>
-                <Link to="/Hotels/:id">Hotel Details</Link>
-              </li> */}
+              <li>
+                <Link to="/contact">Message</Link>
+              </li>
+              <span className="navbar__span">|</span>
+              
               <AuthContent />
               
             </ul>

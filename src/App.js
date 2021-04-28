@@ -12,6 +12,7 @@ import Enquiry from './pages/AdminEnquiry';
 import Messages from './pages/AdminMessage';
 import HotelDetails from "./pages/HotelDetails";
 import Error404 from "./pages/Error404";
+import Contact from "./pages/Contact";
 // Pages End
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/"component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path="/hotels" component={Hotels} />
+          <Route exact path="/Contact" component={Contact} />
           <Route exact path="/hotel/:id" component={HotelDetails} />
           <Route exact path="/admin/add-product" component={Add} />
           <Route exact path="/admin/delete-product" component={Delete} />
