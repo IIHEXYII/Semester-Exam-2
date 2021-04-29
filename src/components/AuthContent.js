@@ -29,16 +29,16 @@ function Nav() {
            <span className="navbar__span navbar__span--alt">|</span>
            <div className="mobile">
            <li>
-                 <Link className="mobile__link" to='/addproduct'>Add Hotels</Link>
+                 <Link className="mobile__link" to='/admin/add-product'>Add Hotels</Link>
               </li>
            <li>
-                 <Link className="mobile__link" to='/admin'>delete Hotels</Link>
+                 <Link className="mobile__link" to='/admin/delete-product'>delete Hotels</Link>
               </li>
                 <li>
-                 <Link className="mobile__link" to='/admin'>View enquiry</Link>
+                 <Link className="mobile__link" to='/admin/enquiry'>View enquiry</Link>
               </li>
               <li>
-                 <Link className="mobile__link" to='/admin'>View Messages</Link>
+                 <Link className="mobile__link" to='/admin/messages'>View Messages</Link>
               </li>
            </div>
            <li>

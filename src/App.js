@@ -1,6 +1,7 @@
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import React, {useState} from 'react';
 
 //Pages
 import Home from './pages/Home';
@@ -29,7 +30,7 @@ function App() {
           <Route exact path="/admin/add-product" component={Add} />
           <Route exact path="/admin/delete-product" component={Delete} />
           <Route exact path="/admin/enquiry" component={Enquiry} />
-          <Route exact path="/admin/Messages" component={Messages} />
+          <Route exact path="/admin/messages" component={Messages} />
           <Route component={Error404} />
         </Switch>
       </Router>
