@@ -17,7 +17,7 @@ export default function SearchBar({originalList, list, setSearchedResults}) {
         searchItems(event, data);
         setSearch(data);
     }
-    if (setSearch === undefined || setSearch.length == 0) {
+    if (searchItems.array === 'undefined' || searchItems.length == 0) {
         // array empty or does not exist
         return (
             <h1>ERROR! This B!tch Be Empty!</h1>
@@ -36,7 +36,7 @@ export default function SearchBar({originalList, list, setSearchedResults}) {
                 // onBlur={() => setShowSearchList(false)}
                 />
                 {showSearchList && (
-                    <div className='searchBar__div'>
+                    <div className='searchBar__div' onClick={e => setShowSearchList(false)}>
                         {list.map(item => {
                             return (
                                 <div className='searchBar__item' onClick={e => setSearchTerm(e, item.title)}>

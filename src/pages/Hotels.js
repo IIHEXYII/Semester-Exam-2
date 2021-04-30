@@ -6,7 +6,6 @@ import HotelList from '../components/HotelList';
 import SearchBar from '../components/Search';
 import { BASE_URL } from '../utils/constants'
 import axios from 'axios';
-// import AutoComplete from '../components/AutoComplete';
 
 
 function Hotels() {
@@ -45,7 +44,6 @@ function Hotels() {
                     </Link>
                 </Banner>
             </Hero>
-            {/* <AutoComplete /> */}
             <SearchBar originalList={originalData} list={data} setSearchedResults={setSearchedResults}/>
             <HotelList list={data} loading={loading} error={error}/>
             
