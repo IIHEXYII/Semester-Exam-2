@@ -37,6 +37,7 @@ export default function SearchBar({originalList, list, setSearchedResults}) {
                 />
                 {showSearchList && (
                     <div className='searchBar__div' onClick={e => setShowSearchList(false)}>
+                    <button className='searchBar__close'  onClick={e => setShowSearchList(false)} >Close Search</button>
                         {list.map(item => {
                             return (
                                 <div className='searchBar__item' onClick={e => setSearchTerm(e, item.title)}>

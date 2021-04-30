@@ -45,4 +45,14 @@
         cursor: pointer; 
 
     }
+    &__close {
+        //this is some Temp shit
+        margin: 10px 6px;
+        background:red;
+        color:$mainWhite;
+        padding: 5px;
+        font-weight: bold;
+        border: none;
+        border-radius: $mainBorderRadius;
+    }
 }
