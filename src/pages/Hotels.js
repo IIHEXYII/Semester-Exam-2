@@ -4,7 +4,6 @@ import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import HotelList from '../components/HotelList';
 import SearchBar from '../components/Search';
-
 import { BASE_URL } from '../utils/constants'
 import axios from 'axios';
 // import AutoComplete from '../components/AutoComplete';

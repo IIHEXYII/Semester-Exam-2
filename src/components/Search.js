@@ -5,6 +5,7 @@ import {useState} from 'react';
 export default function SearchBar({originalList, list, setSearchedResults}) {
     const [showSearchList, setShowSearchList] = useState(false);
     const [search, setSearch] = useState();
+    
     function searchItems(event, value) {
         const newList = originalList.filter(item => new RegExp(value, "gi").test(item.title));
         setSearchedResults(newList);
@@ -16,24 +17,39 @@ export default function SearchBar({originalList, list, setSearchedResults}) {
         searchItems(event, data);
         setSearch(data);
     }
+    if (setSearch === undefined || setSearch.length == 0) {
+        // array empty or does not exist
+        return (
+            <h1>ERROR! This B!tch Be Empty!</h1>
 
-    return (
-        <>
-        <div className='search-container'>
-            <input className='searchBar' type='text' onInput={e => searchItems(e, e.target.value)} value={search} onFocus={() => setShowSearchList(true)} onBlur={() => setShowSearchList(false)}/>
-            {showSearchList && (
-                <div className='searchBar__div'>
-                    {list.map(item => {
-                        return (
-                            <div className='searchBar__item' onClick={e => setSearchTerm(e, item.title)}>
-                                {item.title}
-                            </div>
-                        )
-                    })}
-                </div>
-            )}
-        </div>
-        </>
-    )
-  
+            // THIS SHIT DOESN'T WORK!!! 
+        )
+        
+    } else {
+        return (
+            <>
+            <div className='search-container'>
+                <input className='searchBar' type='text' 
+                onInput={e => searchItems(e, e.target.value)} 
+                value={search} 
+                // onFocus={() => setShowSearchList(true)} 
+                // onBlur={() => setShowSearchList(false)}
+                />
+                {showSearchList && (
+                    <div className='searchBar__div'>
+                        {list.map(item => {
+                            return (
+                                <div className='searchBar__item' onClick={e => setSearchTerm(e, item.title)}>
+                                    {item.title}
+                                </div>
+                            )
+                        })}
+                    </div>
+                )}
+            </div>
+            </>
+        )
+      
+    }
+   
 }

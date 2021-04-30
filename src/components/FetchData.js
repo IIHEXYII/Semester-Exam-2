@@ -1,4 +1,3 @@
-import React from 'react'
 import {useEffect} from 'react'
 import { BASE_URL } from '../utils/constants'
 import axios from 'axios'
