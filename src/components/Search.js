@@ -17,7 +17,7 @@ export default function SearchBar({originalList, list, setSearchedResults}) {
         searchItems(event, data);
         setSearch(data);
     }
-    if (searchItems.array === 'undefined' || searchItems.length == 0) {
+    if (searchItems.array === 'undefined' || searchItems.length === 0) {
         // array empty or does not exist
         return (
             <h1>ERROR! This B!tch Be Empty!</h1>

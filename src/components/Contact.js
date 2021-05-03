@@ -76,9 +76,10 @@ const Contact = () => {
                     </div>
                     
                     <button className="btn__submit" type='submit'>{submitting ? 'Adding ...' : 'Add'}</button>
+                    {success ? <p>Message Was successfully Sent</p> : null}
                 </fieldset>
             </form>
-                {success ? <p>Message Was successfully Sent</p> : null}
+              
             </div>
         </>
     );

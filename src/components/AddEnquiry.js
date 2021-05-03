@@ -42,37 +42,37 @@ const AddEnquiry = () => {
 
     return (
         <>
-            <div className="enquiry">
-            {/* <h1 className="header">Add Product</h1> */}
-                <form className="enquiry__form"  onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="header">Book Hotel</h1>
-                {postError && <p>{postError}</p>}
-                <fieldset className="enquiry__field" disabled={submitting}>
-                   <div className="enquiry__container-div ">
-                   <div className="enquiry__div">
-                        <label className="enquiry__label" htmlFor="firstName" >First Name</label>
-                        <input className="enquiry__input"
-                            id='firstName'
-                            name='first_name'
-                            placeholder='John'
-                            ref={register}
-                        />
-                        <div className="alert-container">
-                        {errors.first_name && <p className="alert">{errors.first_name.message}</p>}
-                        </div>
-                    </div>
+        <div className="enquiry">
+            <form className="enquiry__form"  onSubmit={handleSubmit(onSubmit)}>
+                <label className="enquiry__header" htmlFor="lastName" >Booking Hotel</label>
+                    {postError && <p>{postError}</p>}
+                        <fieldset className="enquiry__field" disabled={submitting}>
+                            <div className="enquiry__container-div ">
+                                <div className="enquiry__div">
+                                    <label className="enquiry__label" htmlFor="firstName" >First Name</label>
+                                    <input className="enquiry__input"
+                                        id='firstName'
+                                        name='first_name'
+                                        placeholder='John'
+                                        ref={register}
+                                    />
+                                    <div className="alert-container">
+                                    {errors.first_name && <p className="alert">{errors.first_name.message}</p>}
+                                </div>
+                            </div>
+                            
                     <div className="enquiry__div">
                         <label className="enquiry__label" htmlFor="lastName" >Last Name</label>
-                        <input className="enquiry__input"
-                            id='lastName'
-                            name='last_name'
-                            placeholder='Doe'
-                            ref={register}
-                        />
-                        <div className="alert-container">
-                        {errors.last_name && <p className="alert">{errors.last_name.message}</p>}
+                            <input className="enquiry__input"
+                                id='lastName'
+                                name='last_name'
+                                placeholder='Doe'
+                                ref={register}
+                            />
+                            <div className="alert-container">
+                                {errors.last_name && <p className="alert">{errors.last_name.message}</p>}
                         </div>
-                    </div>
+                     </div>
                    </div>
 
                    <div className="enquiry__container-div ">
@@ -102,9 +102,10 @@ const AddEnquiry = () => {
                         />
                     </div>
                    </div>
-                 
+                  
+
                         <div className="enquiry__container-div">
-                        <div className="enquiry__div">
+                            <div className="enquiry__div">
                                 <label className="enquiry__label" 
                                 htmlFor="from" >From</label> 
                                     <DatePicker
@@ -117,10 +118,11 @@ const AddEnquiry = () => {
                                         startDate={startDate}
                                         endDate={endDate}
                                         dateFormat='dd/MM/yyyy'
-                                    />
-                                </div>
-                                <div className="alert-container"></div>
+                                        ref={register}
 
+                                    />
+                                     
+                                </div>
                         <div className="enquiry__div">
                             <label className="enquiry__label" 
                                 htmlFor="to" >To</label> 
@@ -134,33 +136,36 @@ const AddEnquiry = () => {
                                         endDate={endDate}
                                         minDate={startDate}
                                         dateFormat='dd/MM/yyyy'
+                                        ref={register}
 
                                     />
                         </div>
                     </div>
-                    <div className="enquiry__container-div">
+                  
+                        <div className="enquiry__div">
+                            <div className="enquiry__div2">
 
-                    <div className="enquiry__div">
-                    <label className="enquiry__label" htmlFor="Comment" >Comment</label>
-                        <textarea className="enquiry__input textarea"
-                            id="Comment"
-                            name='Comment'
-                            placeholder='Anything you wanna add?'
-                            ref={register}
-                            type='text'
-                        />
+                        <label className="enquiry__label" htmlFor="Comment" ></label>
+                            <textarea className="enquiry__input textarea"
+                                id="Comment"
+                                name='Comment'
+                                placeholder='Anything you wanna add?'
+                                ref={register}
+                                type='text'
+                            />
 
-                        <div className="alert-container">
-
+                            <div className="alert-container">
+                            {errors.comment && <p className="alert">{errors.comment.message}</p>}
+                            </div>
                         </div>
-                       
                     </div>
-                </div>
-                    <button className="btn__submit" type='submit'>{submitting ? 'Adding ...' : 'Add'}</button>
+           
+                    <button className="btn__submit" type='submit'>{submitting ? 'Booking ...' : 'Book'}</button>
+                    {success ? <p>Booking was Successful</p> : null}
                 </fieldset>
             </form>
 
-                {success ? <p>Booking was Successful</p> : null}
+              
         </div>
           
         </>
