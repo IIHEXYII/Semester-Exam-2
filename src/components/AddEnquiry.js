@@ -145,10 +145,10 @@ const AddEnquiry = () => {
                         <div className="enquiry__div">
                             <div className="enquiry__div2">
 
-                        <label className="enquiry__label" htmlFor="Comment" ></label>
+                        <label className="enquiry__label" htmlFor="comment" ></label>
                             <textarea className="enquiry__input textarea"
-                                id="Comment"
-                                name='Comment'
+                                id="comment"
+                                name='comment'
                                 placeholder='Anything you wanna add?'
                                 ref={register}
                                 type='text'
