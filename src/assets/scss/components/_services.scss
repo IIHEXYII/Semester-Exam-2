@@ -48,8 +48,14 @@
     }
   }
   
-  .service {
 
+
+}
+
+@media screen and (max-width: 430px) {
+.services {
+  &__center {
+    grid-template-columns: none;
   }
-
+}
 }

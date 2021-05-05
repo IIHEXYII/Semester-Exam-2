@@ -40,7 +40,7 @@ const Contact = () => {
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                 {postError && <p>{postError}</p>}
                 <fieldset className="contact__field" disabled={submitting}>
-                    <div>
+                    <div className="contact__div">
                         <label className="contact__label" htmlFor="MessageName" >Full Name</label>
                         <input className="contact__input"
                             id='MessageName'
@@ -51,7 +51,7 @@ const Contact = () => {
                         {errors.name && <p className="alert">{errors.name.message}</p>}
                     </div>
 
-                    <div>
+                    <div className="contact__div">
                         <label className="contact__label" htmlFor="MessageEmail" >Email</label>
                         <input className="contact__input"
                             id='MessageEmail'
@@ -62,7 +62,7 @@ const Contact = () => {
                         {errors.email && <p className="alert">{errors.email.message}</p>}
                     </div>
                    
-                    <div>
+                    <div className="contact__div">
                     <label className="contact__label" htmlFor="message" >Messages</label>
                         <textarea className="contact__input messageBox"
                             id="message"

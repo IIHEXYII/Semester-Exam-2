@@ -119,7 +119,7 @@ const AddEnquiry = () => {
                                         endDate={endDate}
                                         dateFormat='dd/MM/yyyy'
                                         ref={register}
-
+                                
                                     />
                                      
                                 </div>
@@ -143,8 +143,6 @@ const AddEnquiry = () => {
                     </div>
                   
                         <div className="enquiry__div">
-                            <div className="enquiry__div2">
-
                         <label className="enquiry__label" htmlFor="comment" ></label>
                             <textarea className="enquiry__input textarea"
                                 id="comment"
@@ -158,8 +156,7 @@ const AddEnquiry = () => {
                             {errors.comment && <p className="alert">{errors.comment.message}</p>}
                             </div>
                         </div>
-                    </div>
-           
+            
                     <button className="btn__submit" type='submit'>{submitting ? 'Booking ...' : 'Book'}</button>
                     {success ? <p>Booking was Successful</p> : null}
                 </fieldset>

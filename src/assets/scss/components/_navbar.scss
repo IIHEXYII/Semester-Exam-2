@@ -140,6 +140,10 @@ margin: 1rem auto 0 auto;
     &__link{
       overflow: hidden;
     }
+    &__link li{
+      margin: 10px;
+      list-style: none;
+    }
     &__span {
       display: none;
      

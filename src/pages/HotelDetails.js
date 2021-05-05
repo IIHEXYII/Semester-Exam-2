@@ -12,7 +12,7 @@ function SingleHotels() {
     const Loading = require('react-loading-animation');
     const { id } = useParams();
     const UNIQUE_URL = BASE_URL + "/products/" + id;
-
+    
     useEffect(() => {
       const fetchData = async() => {
         try {
@@ -28,10 +28,28 @@ function SingleHotels() {
         } finally {
           setLoading(false);
         }
+        const modalBtn = document.getElementById("modal-btn")
+        const modal = document.querySelector(".modal")
+        const closeBtn = document.querySelector(".close-btn")
+        
+        modalBtn.onclick = function(){
+            modal.style.display = "block"
+          }
+          closeBtn.onclick = function(){
+            modal.style.display = "none"
+          }
+          window.onclick = function(e){
+            if(e.target === modal){
+              modal.style.display = "none"
+            }
+          }
       }
+
+      
       fetchData();
     }, []);
   
+
     if (loading) {
         return <>
                 <Loading />
@@ -45,15 +63,25 @@ function SingleHotels() {
 
     return (
       <>
-      <div className="pageContent">
-        <div className="itemDetailsList">
-                    <div key={products.id} className="itemDetailsList__component">
-                      <ItemDetails {...products} />
-                    </div>
-                {/* <div className="placeholder"> */}
-                    <AddEnquiry />
-                {/* </div> */}
+        <div className="pageContent">
+            <div className="itemDetailsList">
+                      <div key={products.id} className="itemDetailsList__component">
+                        <ItemDetails {...products} />
+              <button className="btn__submit" id="modal-btn">Book Now</button>
+                      </div>
+                  {/* <div className="placeholder"> */}
+                     
+                  {/* </div> */}
+              </div>
+
+
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <AddEnquiry />
             </div>
+          </div>
+
         </div>
       </>
     );

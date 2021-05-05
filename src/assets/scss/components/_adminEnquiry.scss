@@ -1,0 +1,14 @@
+.admin-item {
+    height:90%;
+    width: 100%;
+    padding: 2rem 1rem;
+
+    &__title {
+        margin:5px $secondarySpacing 5px 0;
+    }
+
+    &__container {
+        display:flex;
+    }
+
+}

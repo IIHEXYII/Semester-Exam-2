@@ -2,12 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
      &__field {
          border: none;
          margin: 10px auto 0 auto;
          padding: $secondarySpacing;
-         width: min-content;
      }
+
      &__label {
         display: block;
         text-align: left;
@@ -15,9 +16,13 @@
         text-transform: uppercase;
         font-size: 0.8rem;
     }
+    // &__div {
+    //     max-width:500px;
+    // }
+
      &__input {
         height:35px;
-        width: 500px;
+        width: 100%;
         outline: none;
         font-size: 17px;
         padding-left: 20px;
