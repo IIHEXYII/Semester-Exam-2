@@ -1,7 +1,7 @@
 import useAxios from '../utils/useAxios';
 import { useState } from 'react';
 import { ENQUIRIES_PATH } from '../utils/constants';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { enquirySchema } from '../utils/validation/Schemas';
 // import Hero from '../components/Hero';
@@ -16,7 +16,7 @@ const AddEnquiry = () => {
         const [startDate, setStartDate] = useState(new Date);
         const [endDate, setEndDate] = useState(new Date);
 
-        const { register, handleSubmit, errors } = useForm({
+        const { register, handleSubmit, errors, control } = useForm({
             resolver: yupResolver(enquirySchema)
         });
 
@@ -42,6 +42,7 @@ const AddEnquiry = () => {
 
     return (
         <>
+        {console.log(errors)}
         <div className="enquiry">
             <form className="enquiry__form"  onSubmit={handleSubmit(onSubmit)}>
                 <label className="enquiry__header" htmlFor="lastName" >Booking Hotel</label>
@@ -107,38 +108,61 @@ const AddEnquiry = () => {
                         <div className="enquiry__container-div">
                             <div className="enquiry__div">
                                 <label className="enquiry__label" 
-                                htmlFor="from" >From</label> 
-                                    <DatePicker
-                                        id='from'
-                                        className="enquiry__input"
-                                        selected={startDate}
-                                        onChange={date => setStartDate(date)}
-                                        minDate={(new Date())}
-                                        selectsStart
-                                        startDate={startDate}
-                                        endDate={endDate}
-                                        dateFormat='dd/MM/yyyy'
-                                        ref={register}
-                                
-                                    />
-                                     
+                                htmlFor="from" >From</label>
+                                <Controller 
+                                    control={control} 
+                                    selected={startDate}
+                                    name="startDate"
+                                    value={startDate} 
+                                    render={() => (
+                                        <DatePicker
+                                            id='from'
+                                            name="startDate"
+                                            className="enquiry__input"
+                                            selected={startDate}
+                                            onChange={date => setStartDate(date)}
+                                            minDate={(new Date())}
+                                            selectsStart
+                                            startDate={startDate}
+                                            endDate={endDate}
+                                            dateFormat='dd/MM/yyyy'
+                                            value={startDate}
+                                        /> 
+                                    )}
+                                    onChange={([selected]) => {
+                                        return {value: selected}
+                                    }}
+                                    defaultValue={{}}
+                                /> 
                                 </div>
                         <div className="enquiry__div">
                             <label className="enquiry__label" 
                                 htmlFor="to" >To</label> 
-                                    <DatePicker
-                                        id="to"
-                                        className="enquiry__input"
-                                        selected={endDate}
-                                        onChange={date => setEndDate(date)}
-                                        selectsEnd
-                                        startDate={startDate}
-                                        endDate={endDate}
-                                        minDate={startDate}
-                                        dateFormat='dd/MM/yyyy'
-                                        ref={register}
-
-                                    />
+                                <Controller 
+                                    control={control} 
+                                    selected={endDate}
+                                    name="endDate"
+                                    value={endDate}
+                                    render={() => (
+                                        <DatePicker
+                                            id="to"
+                                            name="endDate"
+                                            className="enquiry__input"
+                                            selected={endDate}
+                                            onChange={date => setEndDate(date)}
+                                            selectsEnd
+                                            startDate={startDate}
+                                            endDate={endDate}
+                                            minDate={startDate}
+                                            dateFormat='dd/MM/yyyy'
+                                            value={endDate}
+                                        /> 
+                                    )}
+                                    onChange={([selected]) => {
+                                        return {value: selected}
+                                    }}
+                                    defaultValue={{}}
+                                />
                         </div>
                     </div>
                   

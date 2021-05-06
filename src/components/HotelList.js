@@ -7,19 +7,23 @@ import { Link } from "react-router-dom"
 function HotelList({list, loading, error}) {
     const Loading = require('react-loading-animation');
   
-    if (loading) {
-        return <>
-                  <Loading />
-                  <h1 className="loading">Loading</h1>
-               </>;
-    }
-    
     if (error) {
-        return <h1>An error occurred</h1>;
-    };
-    console.log(list);
-    return (
-      <>
+      return (
+        <>
+          <h1>An error occurred</h1>
+          <p>{error}</p>
+        </>
+      )
+
+    } else if (loading) {
+        return (
+          <>
+            <Loading />
+            <h1 className="loading">Loading</h1>
+          </>
+        );
+    } else if (list.length > 0) {
+      return (
         <div className="itemList">
            {list.map(product => {
                   return (
@@ -32,8 +36,13 @@ function HotelList({list, loading, error}) {
                   );
               })}
         </div>
-      </>
     );
+    } else if (list.length === 0) {
+      return (
+        <h1>There are no matching elements</h1>
+      )
+    }
+
   }
   export default HotelList;
 
