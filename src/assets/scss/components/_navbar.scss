@@ -92,6 +92,8 @@ margin: 1rem auto 0 auto;
     .navbar{
       &__title {
         max-width: 100px;
+        text-transform: uppercase;
+        // letter-spacing: $mainSpacing;
       }
         &__btn {
             display: none;

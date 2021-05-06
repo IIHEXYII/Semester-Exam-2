@@ -39,7 +39,7 @@ function HotelList({list, loading, error}) {
     );
     } else if (list.length === 0) {
       return (
-        <h1>There are no matching elements</h1>
+        <h1 className="noMatch">There are no matching elements</h1>
       )
     }
 

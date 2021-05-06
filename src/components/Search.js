@@ -24,6 +24,7 @@ export default function SearchBar({originalList, list, setSearchedResults}) {
         <>
         <div className='search-container'>
             <input className='searchBar' type='text' 
+            placeholder='Search...'
             onInput={e => searchItems(e, e.target.value)} 
             value={search} 
             // onFocus={() => setShowSearchList(true)} 

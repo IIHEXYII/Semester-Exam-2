@@ -3,7 +3,7 @@
     display: flex;
 }
 .searchBar {
-    width: 70%;
+    width: 40%;
     max-height: 100px;
     min-width: 300px;
     outline: none;
@@ -19,8 +19,8 @@
 
 
     &__div {
-        width: 70%;
-        max-height: 100px;
+        width: 40%;
+        max-height: 115px;
         outline: none;
         font-size: 17px;
         border: 1px solid lightgrey;
@@ -30,7 +30,7 @@
         z-index: 1;
         position: absolute;
         top: 100%;
-        left:15%;
+        left:30%;
         background:$primaryBgColor;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         

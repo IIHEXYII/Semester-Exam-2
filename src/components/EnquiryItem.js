@@ -1,5 +1,5 @@
 const EnquiryItem = props => {
-    const { id, first_name, last_name, email, people, phone, date_from, date_to } = props;
+    const { id, first_name, last_name, email, people, comment, date_from, date_to } = props;
     return (
       <div className="admin-item" id={id}>
         <div className="admin-item__container">
@@ -8,10 +8,13 @@ const EnquiryItem = props => {
         </div>
         <div className="admin-item__text-container">
           <p className="admin-item__text">{email}</p>
-          <p className="admin-item__text">Persons: ({people})</p>
-          <p className="admin-item__text">{phone}</p>
-          <p className="admin-item__text">{date_from}</p>
-          <p className="admin-item__text">{date_to}</p>
+          <p className="admin-item__text">People staying: ({people})</p>
+          <div className="admin-item__div">
+          <p className="admin-item__text">From: {date_from}</p>
+          <p className="admin-item__text">To: {date_to}</p>
+          </div>
+          <p className="admin-item__text">{comment}</p>
+         
         </div>
       </div>
     );

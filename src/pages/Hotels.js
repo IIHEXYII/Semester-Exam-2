@@ -16,7 +16,6 @@ function Hotels() {
 
     useEffect(() => {
         const fetchData = async() => {
-            console.log("fuck you");
           try {
             const response = await axios.get(`${BASE_URL}/products`);
             if (response.status === 200) {

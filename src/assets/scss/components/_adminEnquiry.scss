@@ -1,14 +1,23 @@
 .admin-item {
-    height:90%;
-    width: 100%;
+    width: 400px;
     padding: 2rem 1rem;
 
     &__title {
         margin:5px $secondarySpacing 5px 0;
+        font-size: 2rem;
     }
 
     &__container {
         display:flex;
+    }
+    &__text-container {
+        border: 1px solid green;
+    }
+    &__text {
+        padding: $secondarySpacing;
+    }
+    &__div {
+        display: flex;
     }
 
 }
