@@ -1,7 +1,7 @@
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import React, {useState} from 'react';
+import React from 'react';
 
 //Pages
 import Home from './pages/Home';

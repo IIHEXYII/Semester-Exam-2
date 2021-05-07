@@ -1,5 +1,5 @@
 .admin-item {
-    width: 400px;
+    width: 450px;
     padding: 2rem 1rem;
 
     &__title {
@@ -9,15 +9,24 @@
 
     &__container {
         display:flex;
+        border-bottom:3px solid $primaryColor;
+
     }
     &__text-container {
-        border: 1px solid green;
     }
     &__text {
         padding: $secondarySpacing;
+        font-weight: 500;
     }
     &__div {
         display: flex;
     }
+    &__overflow {
+        overflow: auto;
+        max-height: 240px; 
+    }
+}
 
+.comment {
+    margin: 10px auto;
 }

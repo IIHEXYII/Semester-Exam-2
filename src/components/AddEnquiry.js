@@ -113,7 +113,7 @@ const AddEnquiry = () => {
                                     control={control} 
                                     selected={startDate}
                                     name="startDate"
-                                    value={startDate} 
+                                    value={startDate}
                                     render={() => (
                                         <DatePicker
                                             id='from'
@@ -166,7 +166,7 @@ const AddEnquiry = () => {
                         </div>
                     </div>
                   
-                        <div className="enquiry__div">
+                        {/* <div className="enquiry__div">
                         <label className="enquiry__label" htmlFor="comment" ></label>
                             <textarea className="enquiry__input textarea"
                                 id="comment"
@@ -179,7 +179,7 @@ const AddEnquiry = () => {
                             <div className="alert-container">
                             {errors.comment && <p className="alert">{errors.comment.message}</p>}
                             </div>
-                        </div>
+                        </div> */}
             
                     <button className="btn__submit" type='submit'>{submitting ? 'Booking ...' : 'Book'}</button>
                     {success ? <p>Booking was Successful</p> : null}

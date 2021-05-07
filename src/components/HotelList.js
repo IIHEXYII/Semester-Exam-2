@@ -1,6 +1,3 @@
-import {useState, useEffect} from 'react'
-// import { BASE_URL } from '../utils/constants'
-// import axios from 'axios'
 import Item from './Item'
 import { Link } from "react-router-dom"
 

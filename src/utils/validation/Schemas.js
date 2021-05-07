@@ -19,7 +19,7 @@ export const enquirySchema = yup.object().shape({
   first_name: yup.string().required('⚠ Please enter a valid first name'),
   last_name: yup.string().required('⚠ Please enter a valid last name'),
   email: yup.string().required('⚠ Please enter a valid email'),
-  comment: yup.string().required('⚠ Please enter a Message'),
+  // comment: yup.string().required('⚠ Please enter a Message'),
   startDate: yup.date().required('⚠ Please add a Valid date'),
   endDate: yup.date().required('⚠ Please add a Valid date'),
 });
