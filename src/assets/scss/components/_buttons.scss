@@ -73,5 +73,25 @@
 	        top:1px;
         }
   }
+  &__backTop {
+    border: none;
+    margin: 0 auto 10px auto;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: $mainWhite;
+    background: #33383b;
+    padding: 1rem 1.5rem;
+    border: 3px solid #33383b;
+    transition: all 0.3s linear;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    &:hover {
+        border: 3px solid $primaryColor;
+        color: $primaryColor;
+    }
+  }
 }
 

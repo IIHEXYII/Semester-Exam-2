@@ -6,6 +6,7 @@ import HotelList from '../components/HotelList';
 import SearchBar from '../components/Search';
 import { BASE_URL } from '../utils/constants'
 import axios from 'axios';
+import Footer from '../components/Footer';
 
 
 function Hotels() {
@@ -45,6 +46,7 @@ function Hotels() {
             </Hero>
             <SearchBar originalList={originalData} list={data} setSearchedResults={setSearchedResults}/>
             <HotelList list={data} loading={loading} error={error}/>
+            <Footer />
             
         </div>
         </>

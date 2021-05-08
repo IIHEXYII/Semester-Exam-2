@@ -13,7 +13,7 @@ const contactPage = () => {
         <Contact />
         </Banner>
         </div>
-    </Hero>
+        </Hero>
     </div>
           
         </>

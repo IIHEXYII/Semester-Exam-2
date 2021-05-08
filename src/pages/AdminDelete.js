@@ -6,6 +6,7 @@ import { PRODUCTS_PATH } from '../utils/constants';
 import Item from '../components/Item';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 
 const Admin = () => {
     const [auth] = useContext(AuthContext);
@@ -73,6 +74,7 @@ const Admin = () => {
                     })}
               </div>
             </div>
+            <Footer />
           </>
           );
    

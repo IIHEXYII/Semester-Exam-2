@@ -6,6 +6,7 @@ import { ENQUIRIES_PATH } from '../utils/constants';
 import EnquiryItem from '../components/EnquiryItem';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 
 const AdminEnquiry = () => {
     const [auth] = useContext(AuthContext);
@@ -57,6 +58,7 @@ const AdminEnquiry = () => {
                     })}
               </div>
             </div>
+            <Footer />
           </>
           );
    

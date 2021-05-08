@@ -6,6 +6,7 @@ import { CONTACTS_PATH } from '../utils/constants';
 import MessageItem from '../components/MessageItem';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 
 const AdminMessage = () => {
     const [auth] = useContext(AuthContext);
@@ -57,6 +58,7 @@ const AdminMessage = () => {
                     })}
               </div>
             </div>
+            <Footer />
           </>
           );
    

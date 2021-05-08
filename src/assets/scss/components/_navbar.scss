@@ -9,7 +9,11 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
     &__logo {
-        width: 3.5em;
+        // width: 3.5em;
+        width: 1em;
+        padding: 5px;
+        font-size: 3rem;
+        color: black;
     }
     &__title {
       display: flex;
