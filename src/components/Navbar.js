@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-// import logo from '../assets/images/hexlogo.png';
+// import logo from '../assets/images/meme.png';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import AuthContent from './AuthContent';
@@ -20,7 +20,9 @@ export default class Nav extends Component {
             <RiBuilding2Fill className="navbar__logo" />
             {/* <img className="navbar__logo" src={logo} alt="Hotel Logo" /> */}
           </Link>
-          <h1 className="navbar__title">Holidaze</h1>
+          <Link className="navbar__title" to="/">
+          <h1>Holidaze</h1>
+          </Link>
           <button type="button" className="navbar__btn"
           onClick={this.handleToggle}>
             <FaBars className="navbar__icon" />

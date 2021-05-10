@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { productSchema } from '../utils/validation/Schemas';
 import Hero from '../components/Hero';
 
+
 const AddProduct = () => {
         const http = useAxios();
         const [submitting, setSubmitting] = useState(false);

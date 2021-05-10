@@ -4,6 +4,7 @@ import axios from 'axios'
 import ItemDetails from '../components/ItemDetails'
 import { useParams } from "react-router-dom"
 import AddEnquiry from '../components/AddEnquiry'
+import Footer from '../components/Footer';
 
 function SingleHotels() {
     const [loading, setLoading] = useState(true);
@@ -74,14 +75,13 @@ function SingleHotels() {
                   {/* </div> */}
               </div>
 
-
           <div className="modal">
             <div className="modal-content">
               <span className="close-btn">&times;</span>
               <AddEnquiry />
             </div>
           </div>
-
+          <Footer />
         </div>
       </>
     );

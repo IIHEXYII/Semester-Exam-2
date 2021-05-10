@@ -29,7 +29,6 @@
             color: $primaryColor;
             background-color: #33383b; 
             border: 1px solid $primaryColor;
-
         }
      }
     
@@ -62,13 +61,10 @@
             color: $primaryColor;
             text-decoration: none;
         }
-        
-
      }
   }
   
   .link-1 {
-    
     &::before {
         content: none;
     }
