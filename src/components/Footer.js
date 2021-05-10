@@ -24,8 +24,8 @@ function topFunction() {
                     <p class="footer__links">
                         <button onClick={topFunction} class="btn__backTop"title="Go to top">Back to top</button>
                     </p>
-                    <p className="footer__center">This is my exam project for my year 2.</p>
-                    <p className="footer__center"> It's not much but its honest work</p>
+                    <p className="footer__center">This is my exam project for my year 2</p>
+                    <p className="footer__center"><a class="meme" target="_blank" href="https://i.redd.it/riarvfbhtjs61.jpg">It ain't much but it's honest work.</a></p>
 
                     <p className="footer__center cc">Holidaze @Noroff &copy; 2021</p>
                 </div>
