@@ -166,10 +166,10 @@ const AddEnquiry = () => {
                         </div>
                     </div>
 
+
 {/* /////////////////////////////////////////////////////////////////////////////////////////////                    */}
                             {/* REMEMBER! HOTEL ID NEEDED IN SUBMIT  */}
 {/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
-
 
                         {/* <div className="enquiry__div">
                         <label className="enquiry__label" htmlFor="comment" ></label>

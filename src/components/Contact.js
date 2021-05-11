@@ -1,12 +1,12 @@
-import useAxios from '../utils/useAxios';
+import axios from 'axios';
 import { useState } from 'react';
 import { CONTACTS_PATH } from '../utils/constants';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { messageSchema } from '../utils/validation/Schemas';
-
+import { BASE_URL } from '../utils/constants';
 const Contact = () => {
-        const http = useAxios();
+        // const http = useAxios();
         const [submitting, setSubmitting] = useState(false);
         const [postError, setPostError] = useState(null);
         const [success, setSuccess] = useState(null);
@@ -18,11 +18,11 @@ const Contact = () => {
         const onSubmit = async data => {
             setSubmitting(true);
             setPostError(null);
-            
+             
             console.log(data);
 
             try {
-                const response = await http.post(`${CONTACTS_PATH}`, data);
+                const response = await axios.post(`${BASE_URL}${CONTACTS_PATH}`, data);
                 console.log('response', response.data);
                 setSuccess(true);
             } catch (error) {
@@ -38,7 +38,7 @@ const Contact = () => {
         <>
             <div className="contact">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                {postError && <p>{postError}</p>}
+                {postError && <p className="alert2">{postError}</p>}
                 <fieldset className="contact__field" disabled={submitting}>
                     <div className="contact__div">
                         <label className="contact__label" htmlFor="MessageName" >Full Name</label>
@@ -48,7 +48,7 @@ const Contact = () => {
                             placeholder='John Doe'
                             ref={register}
                         />
-                        {errors.name && <p className="alert">{errors.name.message}</p>}
+                        {errors.name && <p className="alert2">{errors.name.message}</p>}
                     </div>
 
                     <div className="contact__div">
@@ -59,7 +59,7 @@ const Contact = () => {
                             placeholder='example@gmail.com'
                             ref={register}
                         />
-                        {errors.email && <p className="alert">{errors.email.message}</p>}
+                        {errors.email && <p className="alert2">{errors.email.message}</p>}
                     </div>
                    
                     <div className="contact__div">
@@ -71,7 +71,7 @@ const Contact = () => {
                             ref={register}
                             type='text'
                         />
-                        {errors.message && <p className="alert">{errors.message.message}</p>}
+                        {errors.message && <p className="alert2">{errors.message.message}</p>}
                        
                     </div>
                     

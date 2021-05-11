@@ -49,7 +49,7 @@
       &__link a {
         display: block;
         text-decoration: none;
-        padding: 1rem 0;
+        padding: 2rem 0;
         color: $mainBlack;
         transition: $mainTransition;
         text-align: center;
@@ -91,7 +91,8 @@ margin: 1rem auto 0 auto;
 }
 .show-nav {
     // max-height: 250px;
-    height:auto;
+    // height:auto;
+    height: 900px;
     // need to find a fix to make it smooth again 
     // but for now leave it on auto for now
 
@@ -122,6 +123,7 @@ margin: 1rem auto 0 auto;
           }
           &__link a {
             margin: 0 1rem;
+            padding: 1rem 0;
           }
           &__logout {
             margin: 0 1rem;
