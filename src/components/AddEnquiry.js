@@ -20,7 +20,7 @@ const AddEnquiry = ({product}) => {
         const [endDate, setEndDate] = useState(minDate);
 
         console.log(minDate);
-        const { register, handleSubmit, errors, control } = useForm({
+        const { register, handleSubmit, errors } = useForm({
             resolver: yupResolver(enquirySchema)
         });
 

@@ -27,7 +27,7 @@ const AdminMessage = () => {
         };
 
         getProducts();
-      }, []);
+      }, [http]);
 
 
     if (!auth) {

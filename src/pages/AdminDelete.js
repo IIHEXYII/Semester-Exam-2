@@ -9,6 +9,7 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 
 const Admin = () => {
+    console.log("faccckkkaaaauuu");
     const [auth] = useContext(AuthContext);
     const history = useHistory();
     const [products, setProducts] = useState(null);
@@ -43,7 +44,7 @@ const Admin = () => {
         };
 
         getProducts();
-      }, []);
+      }, [http]);
 
 
     if (!auth) {

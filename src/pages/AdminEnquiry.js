@@ -7,6 +7,7 @@ import EnquiryItem from '../components/EnquiryItem';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
+// import axios from 'axios';
 
 const AdminEnquiry = () => {
     const [auth] = useContext(AuthContext);
@@ -27,7 +28,7 @@ const AdminEnquiry = () => {
         };
 
         getProducts();
-      }, []);
+      }, [http]);
 
 
     if (!auth) {
