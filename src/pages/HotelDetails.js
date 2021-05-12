@@ -78,7 +78,7 @@ function SingleHotels() {
           <div className="modal">
             <div className="modal-content">
               <span className="close-btn">&times;</span>
-              <AddEnquiry />
+              <AddEnquiry product={products} />
             </div>
           </div>
           <Footer />

@@ -1,21 +1,25 @@
-import useAxios from '../utils/useAxios';
+// import useAxios from '../utils/useAxios';
+import axios from 'axios';
 import { useState } from 'react';
 import { ENQUIRIES_PATH } from '../utils/constants';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { enquirySchema } from '../utils/validation/Schemas';
 // import Hero from '../components/Hero';
-import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import { BASE_URL } from '../utils/constants';
 
-const AddEnquiry = () => {
-        const http = useAxios();
+
+const AddEnquiry = ({product}) => {
+        // const http = useAxios();
         const [submitting, setSubmitting] = useState(false);
         const [postError, setPostError] = useState(null);
         const [success, setSuccess] = useState(null);
-        const [startDate, setStartDate] = useState(new Date);
-        const [endDate, setEndDate] = useState(new Date);
+        const minDate = `${new Date().getFullYear()}-${new Date().getMonth()+1 > 10 ? (new Date().getMonth()+1) : "0"+(new Date().getMonth()+1)}-${new Date().getDate() > 10 ? new Date().getDate() : "0"+new Date().getDate()}`
+        const [startDate, setStartDate] = useState(minDate);
+        const [endDate, setEndDate] = useState(minDate);
 
+        console.log(minDate);
         const { register, handleSubmit, errors, control } = useForm({
             resolver: yupResolver(enquirySchema)
         });
@@ -23,11 +27,11 @@ const AddEnquiry = () => {
         const onSubmit = async data => {
             setSubmitting(true);
             setPostError(null);
-            
+            data = {...data, price: product.price, name: product.title}
             console.log(data);
 
             try {
-                const response = await http.post(`${ENQUIRIES_PATH}`, data);
+                const response = await axios.post(`${BASE_URL}${ENQUIRIES_PATH}`, data);
                 console.log('response', response.data);
                 setSuccess(true);
             } catch (error) {
@@ -103,68 +107,39 @@ const AddEnquiry = () => {
                         />
                     </div>
                    </div>
-                  
-
+                
                         <div className="enquiry__container-div">
                             <div className="enquiry__div">
                                 <label className="enquiry__label" 
                                 htmlFor="from" >From</label>
-                                <Controller 
-                                    control={control} 
-                                    selected={startDate}
-                                    name="startDate"
-                                    value={startDate}
-                                    render={() => (
-                                        <DatePicker
-                                            id='from'
-                                            name="startDate"
-                                            className="enquiry__input"
-                                            selected={startDate}
-                                            onChange={date => setStartDate(date)}
-                                            minDate={(new Date())}
-                                            selectsStart
-                                            startDate={startDate}
-                                            endDate={endDate}
-                                            dateFormat='dd/MM/yyyy'
-                                            value={startDate}
-                                        /> 
-                                    )}
-                                    onChange={([selected]) => {
-                                        return {value: selected}
-                                    }}
-                                    defaultValue={{}}
-                                /> 
+                                <input type="date"
+                                        className="enquiry__input"
+                                        id="start"
+                                        name="date_from"
+                                        checked={startDate}
+                                        value={startDate}
+                                        onChange={e => setStartDate(e.target.value)}
+                                        min={minDate}
+                                        ref={register}
+                                        >
+                                    </input>
                                 </div>
                         <div className="enquiry__div">
                             <label className="enquiry__label" 
-                                htmlFor="to" >To</label> 
-                                <Controller 
-                                    control={control} 
-                                    selected={endDate}
-                                    name="endDate"
-                                    value={endDate}
-                                    render={() => (
-                                        <DatePicker
-                                            id="to"
-                                            name="endDate"
-                                            className="enquiry__input"
-                                            selected={endDate}
-                                            onChange={date => setEndDate(date)}
-                                            selectsEnd
-                                            startDate={startDate}
-                                            endDate={endDate}
-                                            minDate={startDate}
-                                            dateFormat='dd/MM/yyyy'
-                                            value={endDate}
-                                        /> 
-                                    )}
-                                    onChange={([selected]) => {
-                                        return {value: selected}
-                                    }}
-                                    defaultValue={{}}
-                                />
+                                htmlFor="to" >To</label>
+                                    <input type="date"
+                                        className="enquiry__input"
+                                        id="to"
+                                        name="date_to"
+                                        checked={endDate}
+                                        value={endDate}
+                                        onChange={e => {setEndDate(e.target.value); console.log(e);}}
+                                        min={minDate}
+                                        ref={register}
+                                        >
+                                    </input>
+                                </div>
                         </div>
-                    </div>
 
 
 {/* /////////////////////////////////////////////////////////////////////////////////////////////                    */}
@@ -189,9 +164,7 @@ const AddEnquiry = () => {
                     <button className="btn__submit" type='submit'>{submitting ? 'Booking ...' : 'Book'}</button>
                     {success ? <p>Booking was Successful</p> : null}
                 </fieldset>
-            </form>
-
-              
+            </form>  
         </div>
           
         </>
