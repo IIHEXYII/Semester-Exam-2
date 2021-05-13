@@ -110,8 +110,7 @@ const AddEnquiry = ({product}) => {
                 
                         <div className="enquiry__container-div">
                             <div className="enquiry__div">
-                                <label className="enquiry__label" 
-                                htmlFor="from" >From</label>
+                                <label className="enquiry__label" htmlFor="start" >From</label>
                                 <input type="date"
                                         className="enquiry__input"
                                         id="start"
@@ -125,8 +124,7 @@ const AddEnquiry = ({product}) => {
                                     </input>
                                 </div>
                         <div className="enquiry__div">
-                            <label className="enquiry__label" 
-                                htmlFor="to" >To</label>
+                            <label className="enquiry__label"  htmlFor="to" >To</label>
                                     <input type="date"
                                         className="enquiry__input"
                                         id="to"

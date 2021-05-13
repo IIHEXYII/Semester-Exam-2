@@ -5,23 +5,23 @@ export default class Services extends Component {
     state = { services: [
         {
             icon:<FaCocktail/>,
-            title:"Big Cocktail bar",
-            info:'lorem ipsum in metus vulputate eu scelerisque felis imperdiet proin'
+            title:"Cocktail bars",
+            info:'Our Hotels serves a big variety of Cocktails'
         },
         {
             icon:<FaHiking/>,
             title:"Hiking Routes",
-            info:'lorem ipsum in metus vulputate eu scelerisque felis imperdiet proin'
+            info:'Norway offers a waste amount of hiking trips and beautiful sceneries'
         },
         {
             icon:<FaShuttleVan/>,
-            title:"Free Transport",
-            info:'lorem ipsum in metus vulputate eu scelerisque felis imperdiet proin'
+            title:"Cheep Transport",
+            info:'Get to where you want when you want with our local traveling services'
         },
         {
             icon:<FaBeer/>,
-            title:"Alcohol serving 24/7",
-            info:'lorem ipsum in metus vulputate eu scelerisque felis imperdiet proin'
+            title:"Pubs & night clubs",
+            info:'night clubs are in walking distance from our hotels'
         }
     ]}
 
