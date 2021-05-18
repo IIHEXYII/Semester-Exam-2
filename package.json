@@ -1,6 +1,7 @@
 {
   "name": "js-frameworks-ca",
   "version": "0.1.0",
+  "homepage": "http://holidaze.hexyweb.com",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^1.3.5",
