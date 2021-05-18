@@ -15,12 +15,11 @@ const EnquiryItem = props => {
           <p className="admin-item__text"><BiCalendarPlus />From: {date_from}</p>
           <p className="admin-item__text"><BiCalendarMinus />To: {date_to}</p>
           </div>
-          <p className="admin-item__text">{(date_to - date_from) * price}</p>
-          <p className="admin-item__text">{comment}</p>
+          {/* <p className="admin-item__text">{(date_to - date_from) * price}</p> */}
+          {/* <p className="admin-item__text">{comment}</p> */}
         </div>
       </div>
     );
   };
-        //  {//////////////////////////* ADD TITLE AND PRICE TO STRAPI  *//////////////////////////////}
   
   export default EnquiryItem;
