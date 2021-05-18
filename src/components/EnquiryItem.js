@@ -1,6 +1,6 @@
 import { BiEnvelope, BiUser, BiCalendarPlus, BiCalendarMinus } from "react-icons/bi";
 const EnquiryItem = props => {
-    const { id, first_name, last_name, email, people, comment, date_from, date_to, title, price } = props;
+    const { id, first_name, last_name, email, people, date_from, date_to, title, } = props;
     return (
       <div className="admin-item" id={id}>
         <h2 className="admin-item__text">{title}</h2>
