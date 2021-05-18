@@ -29,7 +29,7 @@ function Featured() {
       const fetchData = async() => {
         try {
           const response = await axios.get(`${BASE_URL}/products`);
-            console.log(response);
+            // console.log(response);
             
           if (response.status === 200) {
             setProducts(response.data);

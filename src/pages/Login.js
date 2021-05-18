@@ -62,7 +62,7 @@ const Login = () => {
               />
               {errors.password && <p className="alert">{errors.password.message}</p>}
             </div>
-          <button className="btn__submit" type='submit'>{submitting ? 'Loggin in...' : 'Login'}</button>
+          <button className="btn__submit" type='submit'>{submitting ? 'Logging in...' : 'Login'}</button>
           </div>
         </fieldset>
       </form>
