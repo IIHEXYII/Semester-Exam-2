@@ -6,22 +6,22 @@ export default class Services extends Component {
         {
             icon:<FaCocktail/>,
             title:"Cocktail bars",
-            info:'Our Hotels serves a big variety of Cocktails'
+            info:'Our hotels serves a big variety of cocktails'
         },
         {
             icon:<FaHiking/>,
             title:"Hiking Routes",
-            info:'Norway offers a waste amount of hiking trips and beautiful sceneries'
+            info:'Norway offers a vast amount of hiking trips and beautiful sceneries'
         },
         {
             icon:<FaShuttleVan/>,
-            title:"Cheep Transport",
+            title:"Cheap Transport",
             info:'Get to where you want when you want with our local traveling services'
         },
         {
             icon:<FaBeer/>,
             title:"Pubs & night clubs",
-            info:'night clubs are in walking distance from our hotels'
+            info:'Night clubs are in walking distance from our hotels'
         }
     ]}
 
