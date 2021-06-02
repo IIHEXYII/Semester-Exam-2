@@ -54,7 +54,7 @@ function SingleHotels() {
     if (loading) {
         return <>
                 <Loading />
-                <h1 className="loading">Loading</h1>
+                <h1 className="loading">Starting up heroku server...</h1>
                 </>;
     }
     
